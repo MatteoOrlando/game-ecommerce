@@ -1,5 +1,5 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import ProductDetails from './pages/ProductDetails';
@@ -10,12 +10,12 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Switch>
+      <Routes>
         <Route path="/" exact component={Home} />
-        <Route path="/" component={ProductList} />
+        <Route path="/products" component={ProductList} />
         <Route path="/product/:id" component={ProductDetails} />
         <Route path="/cart" component={Cart} />
-      </Switch>
+      </Routes>
     </Router>
   );
 }
