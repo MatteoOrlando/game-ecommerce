@@ -24,11 +24,11 @@ function Home() {
         <h1>Benvenuto su Game Over: Il Tuo Negozio di Giochi Definitivo!</h1>
         <p>Scopri le ultime novità e approfitta di sconti imperdibili su giochi per tutte le piattaforme.</p>
         <ul>
-          <li>Giochi per PC, console e mobile a prezzi imbattibili</li>
-          <li>Nuove uscite e classici intramontabili ogni mese</li>
-          <li>Offerte esclusive per i membri con vantaggi unici</li>
-          <li>Contribuisci al bene comune: il 10% del tuo acquisto va in beneficenza</li>
-          <li>Nessun impegno: puoi saltare un mese o annullare quando vuoi</li>
+          <li>Giochi per PC, console e mobile a <strong>prezzi imbattibili</strong></li>
+          <li>Nuove uscite e classici intramontabili <strong>ogni mese</strong></li>
+          <li><strong>Offerte esclusive</strong> per i membri con vantaggi unici</li>
+          <li>Contribuisci al bene comune: il 10% del tuo acquisto va in <strong>beneficenza</strong></li>
+          <li><strong>Nessun impegno</strong>: puoi saltare un mese o annullare quando vuoi</li>
         </ul>
         <button className="join-now-button">Unisciti a Game Over!</button>
         <div className="hero-image">

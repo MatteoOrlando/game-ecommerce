@@ -1,6 +1,8 @@
-/* Home.css */
+body {
+  background-color: rgb(255, 238, 219);
+}
 .home-container {
-  width: 95%;
+  width: 80%;
   margin: auto; /* Centra il contenuto all'interno del viewport */
 }
 
@@ -20,6 +22,7 @@
   justify-content: center; /* Centra verticalmente il contenuto */
   margin-top: 40px; /* Distanza dalla navbar */
   text-align: left; /* Allinea il testo a sinistra */
+  border-radius: 5px;
 }
 
 .hero-banner::before {
@@ -29,7 +32,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.617); /* Overlay semi-trasparente */
+  background: rgba(0, 0, 0, 0.508); /* Overlay semi-trasparente */
   z-index: 1; /* Posiziona l'overlay sopra l'immagine */
 }
 
@@ -40,46 +43,48 @@
 
 .hero-banner h1 {
   font-size: 50px;
-  margin-bottom: 30px; /* Spazio sotto l'h1 */
+  margin-bottom: 20px; /* Spazio sotto l'h1 */
   text-align: center; /* Centra l'h1 */
 }
 
 .hero-banner p {
   font-size: 25px;
-  margin-bottom: 90px; /* Spazio sotto il paragrafo */
+  margin-bottom: 95px; /* Spazio sotto il paragrafo */
   text-align: center; /* Centra il paragrafo */
 }
 
 .hero-banner ul {
   margin-bottom: 30px; /* Spazio sotto la lista */
   text-align: left; /* Allinea la lista a sinistra */
-  list-style-type: none; /* Rimuove i puntini dalla lista */
   padding: 0; /* Rimuove il padding */
   align-self: flex-start;
   margin-left: 100px;
 }
 
 .hero-banner ul li {
-  font-size: 18px;
-  margin-bottom: 20px; /* Spazio tra gli elementi della lista */
+  font-size: 20px;
+  margin-bottom: 15px; /* Spazio tra gli elementi della lista */
 }
 
 .join-now-button {
   font-weight: bold;
-  padding: 10px 20px;
-  background-color: #ffffff9e;
+  padding: 14px 20px;
+  background-color: #ffffff83;
   border: 3px inset #e8e7e6d2;
   color: rgb(5, 5, 5);
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 7px; /* Aggiunge angoli arrotondati */
-  box-shadow: 0 4px 10px rgba(10, 3, 0, 0.8); /* Aggiunge un'ombra leggera */
+  font-size: 18px;
+  border-radius: 7px;
+  box-shadow: 0 4px 10px rgba(10, 3, 0, 0.8);
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease,
-    border 0.2s ease; /* Aggiunge transizioni per l'hover */
+    border 0.2s ease;
+  margin-top: 20px;
+  align-self: flex-start; /* Posiziona il pulsante a sinistra */
+  margin-left: 100px; /* Aggiungi margine sinistro per allinearne il contenuto */
 }
 
 .join-now-button:hover {
-  background-color: #ffffffde; /* Cambia colore al passaggio del mouse */
+  background-color: #ffffffd2; /* Cambia colore al passaggio del mouse */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta l'ombra al passaggio del mouse */
   border: 3px inset #e8e7e6d2; /* Cambia il colore del bordo al passaggio del mouse */
 }
@@ -93,7 +98,7 @@
     border 0s ease;
 }
 
-/* Stile per il contenitore dell'immagine */
+/* Stile HERO-sub-IMG */
 .hero-image {
   position: absolute;
   top: 50%; /* Centra verticalmente l'immagine */
@@ -104,12 +109,14 @@
 }
 
 .hero-image img {
-  width: 100%;
+  width: 30%;
   height: auto;
   border-radius: 10px; /* Aggiunge angoli arrotondati all'immagine */
 }
 
-/*FINE HERO*/
+/* FINE Stile HERO-sub-IMG */
+
+/*FINE HERO-BANNER*/
 
 .categories-section,
 .featured-products-section {
