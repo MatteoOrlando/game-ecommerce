@@ -1,0 +1,31 @@
+/* Navbar.css */
+.navbar {
+  background-color: #222; /* Colore di sfondo scuro */
+  border-bottom: 2px solid #ff652f; /* Linea di accento arancione */
+}
+
+.navbar-brand {
+  color: #dddddde4 /*!important*/; /* Colore del marchio della navbar */
+}
+
+.navbar-nav .nav-link {
+  color: #dddddde4 /*!important*/; /* Colori dei link */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff652f /*!important*/; /* Colore al passaggio del mouse */
+}
+
+.form-control {
+  max-width: 200px; /* Limita la larghezza della casella di ricerca */
+}
+
+.btn-outline-success {
+  color: #ff652f; /* Colore del testo del bottone */
+  border-color: #ff652f; /* Colore del bordo del bottone */
+}
+
+.btn-outline-success:hover {
+  background-color: #ff652f; /* Colore di sfondo del bottone al passaggio del mouse */
+  color: #fff; /* Colore del testo del bottone al passaggio del mouse */
+}
