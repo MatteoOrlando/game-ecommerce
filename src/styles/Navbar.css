@@ -1,13 +1,19 @@
 .navbar {
+  height: 75px;
   width: 100%;
   margin: auto;
-  background-color: #292827;
-  border-bottom: 3px inset #ff652f;
+  background: linear-gradient(
+    to bottom,
+    #383838ee,
+    #000000e4
+  ); /* Sfumatura dal colore specificato verso il nero */
+  border-bottom: 5px inset #ff652f;
 }
 
 .navbar-brand {
-  width: 125px;
-  height: 50px; /* Altezza del logo */
+  margin: auto 30px;
+
+  /* Altezza del logo */
 }
 
 .navbar-brand img {
@@ -16,9 +22,14 @@
 }
 
 .navbar-nav .nav-link {
-  margin-right: 15px;
+  margin-right: 20px;
   font-size: 20px;
   color: #dddddde4;
+}
+
+.log-pos {
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -28,14 +39,15 @@
 /* Stili specifici per il form di ricerca */
 .search-form {
   position: relative; /* Importante per il posizionamento dell'icona */
-  max-width: 310px; /* Adatta la larghezza del form alla tua necessità */
-  margin: auto; /* Centra il form se necessario */
+  max-width: 100%;
+  width: 365px; /* Adatta la larghezza del form alla tua necessità */
+  margin: auto 400px; /* Centra il form se necessario */
 }
 
 /* Stili per il campo di input con icona integrata */
 .form-control {
   max-width: 100%;
-  width: 3010px;
+  width: 370px;
   transition: background-color 0.3s ease;
   background-color: #fff;
   padding-right: 30px; /* Spazio a destra per l'icona */
@@ -44,9 +56,9 @@
 
 /* Icona di lente di ingrandimento posizionata all'interno dell'input */
 .search-icon {
-  font-size: 25px;
+  font-size: 24px;
   position: absolute;
-  right: 16px;
+  right: 9px;
   top: 50%;
   transform: translateY(-50%);
   color: #f24d11;

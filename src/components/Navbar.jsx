@@ -25,18 +25,20 @@ function Navbar() {
                             <Link className="nav-link" to="/register"><strong>Carrello</strong></Link>
                         </li>
                     </ul>
-                    <form className="search-form d-flex mx-auto">
-                        <input className="form-control me-2" type="search" placeholder="Cerca giochi" aria-label="Search" />
+                    <form className="search-form">
+                        <input className="form-control" type="search" placeholder="Cerca giochi" aria-label="Search" />
                         <FontAwesomeIcon icon={faSearch} className="search-icon" />
                     </form>
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/products">Accedi</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/cart">Registrati</Link>
-                        </li>
-                    </ul>
+                    <div className='log-pos'>
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/products">Accedi</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/cart">Registrati</Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
