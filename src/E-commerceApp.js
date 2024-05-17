@@ -5,7 +5,7 @@ import ProductList from './pages/ProductList';
 import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import Navbar from './components/Navbar';
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
 import './App.css';
 import './styles/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

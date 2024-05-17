@@ -7,7 +7,7 @@ body {
 }
 
 .home-container {
-  width: 81%;
+  width: 80%;
   margin: auto; /* Centra il contenuto all'interno del viewport */
 }
 
@@ -26,7 +26,7 @@ body {
   flex-direction: column; /* Dispone gli elementi in colonna */
   align-items: center; /* Centra orizzontalmente il contenuto */
   justify-content: center; /* Centra verticalmente il contenuto */
-  margin-top: 45px; /* Distanza dalla navbar */
+  margin-top: 120px; /* Distanza dalla navbar */
   text-align: left; /* Allinea il testo a sinistra */
   border-radius: 5px;
 }
@@ -78,7 +78,7 @@ body {
   font-weight: bold;
   padding: 15px 20px;
   background-color: #ffffff83;
-  border: 3px inset #e8e7e64e;
+  border: 2px inset #e8e7e64e;
   color: rgb(5, 5, 5);
   cursor: pointer;
   font-size: 18px;
@@ -92,18 +92,26 @@ body {
 }
 
 .join-now-button:hover {
-  background-color: #ffffffd2; /* Cambia colore al passaggio del mouse */
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #a0a0a0eb
+  ); /* Sfumatura dal bianco al grigio chiaro */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta l'ombra al passaggio del mouse */
-  border: 3px inset #e8e7e6d2; /* Cambia il colore del bordo al passaggio del mouse */
+  border: 2px inset #e8e7e6e2; /* Cambia il colore del bordo al passaggio del mouse */
+  transition: box-shadow 0.2s ease, border 0.2s ease;
 }
 
 .join-now-button:active {
-  background-color: #ff5900; /* Colore più scuro quando il pulsante è attivo */
-  box-shadow: 0 5px 10px rgba(10, 3, 0, 0.8); /* Riduce l'ombra quando il pulsante è attivo */
+  background: linear-gradient(
+    to bottom,
+    #ff5900,
+    #5a1c06f1
+  ); /* Sfumatura arancione che scurisce verso il basso */
+  box-shadow: 0 5px 12px rgba(185, 134, 92, 0.8); /* Riduce l'ombra quando il pulsante è attivo */
   color: #fdfafa; /* Cambia il colore del testo quando il pulsante è attivo */
-  border: 4px inset #dd5c1cd2; /* Mantiene il bordo al click */
-  transition: background-color 0s ease, box-shadow 0.2s ease, color 0s ease,
-    border 0s ease;
+  border: 2px inset #dd5c1cd2; /* Mantiene il bordo al click */
+  transition: box-shadow 0s ease, border 0s ease; /* Rimuovi transition per background-color e color */
 }
 
 /* END BUTTON JOIN ------------------------------*/
