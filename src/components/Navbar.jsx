@@ -10,8 +10,8 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
-                    <img src="/path/to/your/logo.png" alt="Game Over Logo" />
-                    Game Over
+                    <img src="/public/assets/Logo-3.webp" alt="" />
+
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -19,10 +19,10 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/login"><strong>Accedi</strong></Link>
+                            <Link className="nav-link" to="/login"><strong>Prodotti</strong></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/register"><strong>Registrati</strong></Link>
+                            <Link className="nav-link" to="/register"><strong>Carrello</strong></Link>
                         </li>
                     </ul>
                     <form className="search-form d-flex mx-auto">
@@ -31,10 +31,10 @@ function Navbar() {
                     </form>
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/products">Prodotti</Link>
+                            <Link className="nav-link" to="/products">Accedi</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/cart">Carrello</Link>
+                            <Link className="nav-link" to="/cart">Registrati</Link>
                         </li>
                     </ul>
                 </div>

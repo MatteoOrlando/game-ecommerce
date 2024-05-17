@@ -21,16 +21,16 @@ function Home() {
   return (
     <div className="home-container">
       <div className="hero-banner">
-        <h1>Benvenuto su Game Over: Il Tuo Negozio di Giochi Definitivo!</h1>
+        <h1>Benvenuto su Game Portal: Il Tuo Negozio di Giochi Definitivo!</h1>
         <p>Scopri le ultime novità e approfitta di sconti imperdibili su giochi per tutte le piattaforme.</p>
         <ul>
           <li>Giochi per PC, console e mobile a <strong>prezzi imbattibili</strong></li>
           <li>Nuove uscite e classici intramontabili <strong>ogni mese</strong></li>
           <li><strong>Offerte esclusive</strong> per i membri con vantaggi unici</li>
-          <li>Contribuisci al bene comune: il 10% del tuo acquisto va in <strong>beneficenza</strong></li>
+          <li>Contribuisci al <strong>bene comune</strong>: il 10% del tuo acquisto va in <strong>beneficenza</strong></li>
           <li><strong>Nessun impegno</strong>: puoi saltare un mese o annullare quando vuoi</li>
         </ul>
-        <button className="join-now-button">Unisciti a Game Over!</button>
+        <button className="join-now-button">Unisciti a Game Portal!</button>
         <div className="hero-image">
           <img src="/path/to/your-image.jpg" alt="Game Over" />
         </div>

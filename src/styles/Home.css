@@ -1,6 +1,7 @@
 body {
   background-color: rgb(255, 238, 219);
 }
+
 .home-container {
   width: 80%;
   margin: auto; /* Centra il contenuto all'interno del viewport */
@@ -14,7 +15,7 @@ body {
   background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
   background-size: 100% auto; /* Ridimensiona l'immagine per coprire completamente il banner */
   background-position: center; /* Centra l'immagine */
-  height: 600px; /* Altezza del banner */
+  height: 700px; /* Altezza del banner */
   color: rgb(229, 229, 229); /* Colore del testo all'interno del banner */
   display: flex;
   flex-direction: column; /* Dispone gli elementi in colonna */
@@ -63,22 +64,23 @@ body {
 
 .hero-banner ul li {
   font-size: 20px;
-  margin-bottom: 15px; /* Spazio tra gli elementi della lista */
+  margin-bottom: 7px; /* Spazio tra gli elementi della lista */
 }
 
+/* BUTTON JOIN ------------------------------*/
 .join-now-button {
   font-weight: bold;
-  padding: 14px 20px;
+  padding: 15px 20px;
   background-color: #ffffff83;
-  border: 3px inset #e8e7e6d2;
+  border: 3px inset #e8e7e64e;
   color: rgb(5, 5, 5);
   cursor: pointer;
   font-size: 18px;
-  border-radius: 7px;
-  box-shadow: 0 4px 10px rgba(10, 3, 0, 0.8);
+  border-radius: 18px;
+  box-shadow: 0 10px 10px rgba(10, 3, 0, 0.8);
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease,
     border 0.2s ease;
-  margin-top: 20px;
+  margin-top: 80px;
   align-self: flex-start; /* Posiziona il pulsante a sinistra */
   margin-left: 100px; /* Aggiungi margine sinistro per allinearne il contenuto */
 }
@@ -93,10 +95,12 @@ body {
   background-color: #ff5900; /* Colore più scuro quando il pulsante è attivo */
   box-shadow: 0 5px 10px rgba(10, 3, 0, 0.8); /* Riduce l'ombra quando il pulsante è attivo */
   color: #fdfafa; /* Cambia il colore del testo quando il pulsante è attivo */
-  border: 5px inset #dd5c1cd2; /* Mantiene il bordo al click */
+  border: 4px inset #dd5c1cd2; /* Mantiene il bordo al click */
   transition: background-color 0s ease, box-shadow 0.2s ease, color 0s ease,
     border 0s ease;
 }
+
+/* END BUTTON JOIN ------------------------------*/
 
 /* Stile HERO-sub-IMG */
 .hero-image {
@@ -114,9 +118,9 @@ body {
   border-radius: 10px; /* Aggiunge angoli arrotondati all'immagine */
 }
 
-/* FINE Stile HERO-sub-IMG */
+/* FINE Stile HERO-sub-IMG------------------------------*/
 
-/*FINE HERO-BANNER*/
+/*FINE HERO-BANNER--------------------------------------*/
 
 .categories-section,
 .featured-products-section {
