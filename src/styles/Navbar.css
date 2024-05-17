@@ -1,18 +1,17 @@
 .navbar {
   width: 100%;
   margin: auto;
-  background-color: #363533;
+  background-color: #292827;
   border-bottom: 3px inset #ff652f;
 }
 
 .navbar-brand {
-  width: 100px;
+  width: 125px;
   height: 50px; /* Altezza del logo */
-  color: #c0b0b0;
 }
 
 .navbar-brand img {
-  width: 100px;
+  width: 130px;
   height: 50px; /* Altezza del logo */
 }
 
@@ -57,6 +56,7 @@
 .form-control:hover {
   background-color: #ffffffbc;
 }
+
 /* Stili per i pulsanti e altri elementi della navbar, se necessario */
 .btn-outline {
   background-color: #f24d113f;
