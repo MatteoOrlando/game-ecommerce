@@ -11,6 +11,11 @@
   color: #c0b0b0;
 }
 
+.navbar-brand img {
+  width: 100px;
+  height: 50px; /* Altezza del logo */
+}
+
 .navbar-nav .nav-link {
   margin-right: 15px;
   font-size: 20px;
