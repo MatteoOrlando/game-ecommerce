@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function Login() {
+function LoginComponent() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:3001/auth/login', { email, password });
-            localStorage.setItem('token', response.data.accessToken);
-            window.location.href = '/';
+            const response = await axios.post('http://localhost:3001/auth/login', {
+                email,
+                password
+            });
+            localStorage.setItem('token', response.data.accessToken);  // Salvataggio del token nel localStorage
+            alert('Login successful');
         } catch (error) {
-            console.error('Login failed:', error);
+            alert('Login failed');
         }
     };
 
@@ -24,4 +27,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default LoginComponent;

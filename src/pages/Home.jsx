@@ -35,9 +35,9 @@ function Home() {
           <img src="/path/to/your-image.jpg" alt="Game Over" />
         </div>
       </div>
-
+      a
       <div className="categories-section">
-        <h2>Categorie</h2>
+        <h5>Categoria</h5>
         <div className="categories-container">
           {categories.map((category) => (
             <div key={category.id} className="category-card">
@@ -53,7 +53,7 @@ function Home() {
       </div>
 
       <div className="featured-products-section">
-        <h2>Prodotti in Evidenza</h2>
+        <h3>Prodotti in Evidenza</h3>
         <div className="products-container">
           {featuredProducts.map((product) => (
             <div key={product.id} className="product-card">
