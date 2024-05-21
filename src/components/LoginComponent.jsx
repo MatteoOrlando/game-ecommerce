@@ -53,7 +53,7 @@ function LoginComponent() {
                         <span className='fb-i-bg'>
                             <i className="fab fa-facebook-f"></i></span><span> ACCEDI CON  <strong> FACEBOOK</strong></span>
                     </button>
-                    <p className="signup"><em>Non hai un account?</em> <strong>CREA UN ACCOUNT</strong></p>
+                    <p className="signup"><em>Non hai un account?</em> <strong><a href='http://localhost:3000/register' className="account-link">CREA UN ACCOUNT</a></strong></p>
                 </div>
             </div>
         </div>

@@ -20,7 +20,9 @@ import Footer from './components/Footer';
 function App() {
   const location = useLocation();
   const isAuthPage =
-    location.pathname === '/login' || location.pathname === '/register';
+    location.pathname === '/login' ||
+    location.pathname === '/register' ||
+    location.pathname === '/customer-service';
 
   return (
     <>

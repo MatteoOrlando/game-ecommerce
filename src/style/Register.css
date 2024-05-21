@@ -6,16 +6,14 @@
   background-position: center;
   height: 725px;
   margin-bottom: 80px;
-  margin: auto;
-  margin-top: 6.5%;
-  color: rgb(229, 229, 229);
+  margin: 6.5% auto;
+  margin-bottom: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: url('/public/assets/Reg-banner.webp') no-repeat center center
-    fixed;
+  background: url('/public/assets/Reg-banner.webp') no-repeat center fixed;
 }
 
 .reg-container::before {
@@ -71,17 +69,17 @@ input::placeholder {
 
 .input-icon i {
   position: absolute;
-  padding: 18px;
+  padding: 13px;
   color: #676767f2;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 input[type='text'],
 input[type='email'],
 input[type='password'] {
-  background: linear-gradient(to right, #fffffff6, #c9c9c9ce);
+  background: linear-gradient(to right, #fffffff6, #cacacace);
   width: 100%;
-  padding-left: 40px;
+  padding-left: 35px;
 }
 
 .login-google-two {
@@ -142,4 +140,12 @@ input[type='password'] {
   font-size: 14px;
   color: #555;
   margin-top: 20px;
+}
+
+.sign-in-link {
+  color: #2c2c2c;
+}
+
+.sign-in-link:hover {
+  color: #1f3fb4;
 }

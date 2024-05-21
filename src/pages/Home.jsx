@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../style/Home.css'
 
@@ -12,16 +11,45 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resultCategories = await axios.get('http://localhost:3001/categories');
-        const resultProducts = await axios.get('http://localhost:3001/products');
-        setCategories(resultCategories.data);
-        setFeaturedProducts(resultProducts.data);
+
+        const token = sessionStorage.getItem('token');
+
+
+        const headers = {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        };
+
+
+        const resCategories = await fetch('http://localhost:3001/categories', {
+          method: 'GET',
+          headers: headers
+        });
+
+        const resProducts = await fetch('http://localhost:3001/products', {
+          method: 'GET',
+          headers: headers
+        });
+
+
+        if (!resCategories.ok || !resProducts.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+
+        const dataCategories = await resCategories.json();
+        const dataProducts = await resProducts.json();
+
+
+        setCategories(dataCategories);
+        setFeaturedProducts(dataProducts);
       } catch (error) {
         setError(error);
       } finally {
         setLoading(false);
       }
     };
+
 
     fetchData();
   }, []);
@@ -45,7 +73,7 @@ function Home() {
         </ul>
         <button className="join-now-button">Unisciti a Game Portal!</button>
         <div className="hero-image">
-          <img src="/public/assets/Logo-3.webp" alt="Game Over" />
+          <img src="" alt="Game Over" />
         </div>
       </div>
 

@@ -3,16 +3,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 6.2%;
-  margin-left: 10%;
-  margin-bottom: 2%;
+  margin: 6.5% auto;
+  margin-bottom: 3%;
   border-radius: 10px;
   background: url('/public/assets/Servbanner.webp') no-repeat center center
     fixed;
   position: relative;
   z-index: 1;
   box-shadow: 8px -8px 30px rgba(10, 3, 0, 0.837);
-  width: 80%;
+  width: 82%;
   background-position: center;
   height: 950px;
 }

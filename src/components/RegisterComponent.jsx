@@ -75,7 +75,7 @@ function RegisterComponent() {
                             </span>
                             REGISTRATI CON <strong>GOOGLE</strong>
                         </a>
-                        <p className="login-prompt"><em>Hai già un account?</em> <strong>ACCEDI</strong></p>
+                        <p className="login-prompt"><em>Hai già un account?</em><a href='http://localhost:3000/login' className='sign-in-link'> <strong>ACCEDI</strong></a></p>
                     </div>
                 </div>
             </div >

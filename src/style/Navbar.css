@@ -9,7 +9,7 @@
   height: 75px;
   width: 100%;
   margin: 0;
-  background: linear-gradient(to bottom, #1f1f1fdb, #000000f6);
+  background: linear-gradient(to top, #101010d4, #000000f9);
   border-bottom: 5px inset #ff5900;
   box-shadow: 0 3px 10px #180701f0;
 }

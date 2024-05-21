@@ -1,19 +1,19 @@
 .footer {
   position: relative;
   z-index: 1000;
-  background: linear-gradient(to bottom, #2f2f2fe7, #000000fa);
+  background: linear-gradient(to bottom, #101010d0, #000000f9);
   color: #fffffff2;
-  padding: 25px;
+  padding-top: 25px;
   font-family: 'Arial', sans-serif;
   font-size: 14px;
-  line-height: 2;
-  border-top: 3px solid #ff5900;
+  border-top: 4px solid #ff5900;
 }
 
 .footer .footer-container .footer-row {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1100px;
+
   margin: 0 auto;
 }
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 function ProductDetails() {
@@ -10,13 +9,51 @@ function ProductDetails() {
 
     useEffect(() => {
         const fetchProductDetails = async () => {
-            const res = await axios.get(`http://localhost:3001/products/${id}`);
-            setProduct(res.data);
+            try {
+
+                const token = sessionStorage.getItem('token');
+
+                const res = await fetch(`http://localhost:3001/products/${id}`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await res.json();
+                setProduct(data);
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
         };
 
         const fetchReviews = async () => {
-            const res = await axios.get(`http://localhost:3001/reviews/product/${id}`);
-            setReviews(res.data);
+            try {
+
+                const token = sessionStorage.getItem('token');
+
+                const res = await fetch(`http://localhost:3001/reviews/product/${id}`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await res.json();
+                setReviews(data);
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
         };
 
         fetchProductDetails();
@@ -24,21 +61,19 @@ function ProductDetails() {
     }, [id]);
 
     const addToCart = async () => {
-        const token = localStorage.getItem('token');
+        const token = sessionStorage.getItem('token');
         if (!token) {
             alert('Please log in to add items to your cart');
             return;
         }
 
         try {
-            const res = await axios.post(`http://localhost:3001/cart`, {
+            const res = await fetch.post(`http://localhost:3001/cart`, {
                 productId: id,
                 quantity
-            }, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
+            }
+
+            );
 
             if (res.status === 201) {
                 alert('Product added to cart');
