@@ -15,6 +15,7 @@ body {
 
 .hero-banner {
   position: relative;
+  z-index: 1;
   background-image: url('/public/assets/DALL·E 2024-05-16 13.11.58 -.webp');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -47,6 +48,7 @@ body {
 }
 
 .hero-banner h1 {
+  margin-top: 70px;
   font-size: 48px;
   margin-bottom: 20px;
   text-align: center;
@@ -59,6 +61,16 @@ body {
   text-align: center;
 }
 
+.Ul-container {
+  right: 19%;
+  position: relative;
+  border-radius: 25px;
+  padding: 15px;
+  background: linear-gradient(to top, #2121216e, #000000);
+  border-bottom: 3px inset #ff5900;
+  border-right: 1px inset #ff5900;
+}
+
 .hero-banner ul {
   margin-bottom: 30px;
   text-align: left;
@@ -69,37 +81,37 @@ body {
 
 .hero-banner ul li {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 /* BUTTON JOIN ------------------------------*/
 .join-now-button {
-  width: 20%;
+  width: 18%;
   font-weight: bold;
-  padding: 14px;
+  padding: 18px;
   background-color: #ffffff83;
   border: 2px inset #e8e7e64e;
   color: rgb(5, 5, 5);
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 18px;
   box-shadow: 0 10px 10px rgba(10, 3, 0, 0.8);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease,
-    border 0.2s ease;
-  margin-top: 70px;
-  margin-left: 6.5%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  margin: 6.5% 6%;
   align-self: flex-start;
 }
 
 .join-now-button:hover {
+  color: #ddddddc2;
   font-size: 19px;
-  background: linear-gradient(to bottom, #ffffff, #a0a0a0eb);
+  background: linear-gradient(to top, #1f1f1f9d, #000000);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   border: 2px inset #e8e7e6e2;
   transition: box-shadow 0.2s ease, border 0.2s ease;
 }
 
 .join-now-button:active {
+  font-size: 21px;
   background: linear-gradient(to bottom, #ff5900, #5a1f06f1);
   box-shadow: 0 5px 12px rgba(185, 134, 92, 0.8);
   color: #fdfafa;
