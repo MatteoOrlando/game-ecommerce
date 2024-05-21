@@ -4,6 +4,7 @@ body {
   background-size: auto;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  padding: auto;
 }
 
 .home-container {
@@ -20,7 +21,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  height: 710px;
+  height: 1080px;
   color: rgb(229, 229, 229);
   display: flex;
   flex-direction: column;
@@ -38,7 +39,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.508);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -61,17 +62,46 @@ body {
   text-align: center;
 }
 
+.brand-container {
+  background-image: url('/public/assets/fe010635-0dff-4975-8a59-7a55b44ca422.webp');
+  background-repeat: no-repeat;
+  background-size: 140% 235%;
+  background-position: center;
+  box-shadow: 8px 15px 35px rgba(0, 0, 0, 0.898);
+  padding: 100px 150px;
+  position: relative;
+  border-radius: 20px;
+  border-top: 2px inset #ff5900;
+  border-left: 4px inset #ff5900;
+  margin-top: 10%;
+  margin-bottom: 30px;
+}
+
+.h1-container {
+  padding: 0px 15px;
+  margin: auto;
+  box-shadow: 8px 15px 35px rgba(0, 0, 0, 0.898);
+  position: relative;
+  border-radius: 25px;
+  background: linear-gradient(to top, #00000066, #000000);
+  border-top: 2px inset #ff5900;
+  border-left: 4px inset #ff5900;
+}
+
 .Ul-container {
+  margin-top: 70px;
+  box-shadow: 8px 15px 35px rgba(0, 0, 0, 0.898);
   right: 19%;
   position: relative;
   border-radius: 25px;
   padding: 15px;
-  background: linear-gradient(to top, #2121216e, #000000);
-  border-bottom: 3px inset #ff5900;
-  border-right: 1px inset #ff5900;
+  background: linear-gradient(to top, #00000066, #000000);
+  border-top: 2px inset #ff5900;
+  border-left: 4px inset #ff5900;
 }
 
 .hero-banner ul {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   margin-bottom: 30px;
   text-align: left;
   padding: 0;
@@ -85,13 +115,16 @@ body {
 }
 
 /* BUTTON JOIN ------------------------------*/
+
 .join-now-button {
-  width: 18%;
+  text-decoration: none;
+  width: 20%;
   font-weight: bold;
   padding: 18px;
-  background-color: #ffffff83;
-  border: 2px inset #e8e7e64e;
-  color: rgb(5, 5, 5);
+  background: linear-gradient(to top, #00000088, #000000ef);
+  border-top: 1px inset #ff5900;
+  border-left: 3px inset #ff5900;
+  color: #ffffffe7;
   cursor: pointer;
   font-size: 20px;
   border-radius: 18px;
@@ -99,23 +132,28 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
   margin: 6.5% 6%;
   align-self: flex-start;
+  margin-bottom: 10%;
+  text-align: center;
 }
 
 .join-now-button:hover {
-  color: #ddddddc2;
-  font-size: 19px;
-  background: linear-gradient(to top, #1f1f1f9d, #000000);
+  color: #ff5900dd;
+  font-size: 20px;
+  background: linear-gradient(to top, #020202ad, #000000ed);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  border: 2px inset #e8e7e6e2;
+  border-top: 1px inset #ff5900;
+  border-left: 3px inset #ff5900;
   transition: box-shadow 0.2s ease, border 0.2s ease;
 }
 
 .join-now-button:active {
+  font-weight: 900;
   font-size: 21px;
-  background: linear-gradient(to bottom, #ff5900, #5a1f06f1);
-  box-shadow: 0 5px 12px rgba(185, 134, 92, 0.8);
-  color: #fdfafa;
-  border: 2px inset #dd5c1cd2;
+  background: linear-gradient(to bottom, #ff5900f6, #aa3c00bc);
+  box-shadow: 1px 2px 8px rgba(218, 100, 4, 0.8);
+  color: #080808f1;
+  border-top: 1px inset #080808;
+  border-left: 1px inset #060606;
   transition: box-shadow 0s ease, border 0s ease;
 }
 

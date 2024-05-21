@@ -62,8 +62,13 @@ function Home() {
   return (
     <div className="home-container">
       <div className="hero-banner">
-        <h1>Benvenuto su Game Portal: Il Tuo Negozio di Giochi Definitivo!</h1>
-        <p>Scopri le ultime novità e approfitta di sconti imperdibili su giochi per tutte le piattaforme.</p>
+        <div className='brand-container'>
+        </div>
+        <div className='h1-container'>
+          <h1>Benvenuto su Game Portal</h1>
+          <p>Scopri le ultime novità e approfitta di sconti imperdibili su giochi per tutte le piattaforme.</p>
+
+        </div>
         <div className='Ul-container'>
           <ul>
             <li>Giochi per PC, console e mobile a <strong>prezzi imbattibili</strong></li>
@@ -73,7 +78,7 @@ function Home() {
             <li><strong>Nessun impegno</strong>: puoi saltare un mese o annullare quando vuoi</li>
           </ul>
         </div>
-        <button className="join-now-button">Unisciti a Game Portal!</button>
+        <a href='http://localhost:3000/register' className="join-now-button">Unisciti a Game Portal!</a>
         <div className="hero-image">
           <img src="" alt="Game Over" />
         </div>
