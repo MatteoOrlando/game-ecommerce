@@ -1,0 +1,145 @@
+.reg-container {
+  position: relative;
+  z-index: 3;
+  box-shadow: 8px -8px 35px rgba(10, 3, 0, 0.837);
+  width: 80%;
+  background-position: center;
+  height: 725px;
+  margin-bottom: 80px;
+  margin: auto;
+  margin-top: 6.5%;
+  color: rgb(229, 229, 229);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: url('/public/assets/Reg-banner.webp') no-repeat center center
+    fixed;
+}
+
+.reg-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.386);
+  z-index: 1;
+}
+
+.card-box-register {
+  position: relative;
+  z-index: 10;
+  max-width: 100%;
+  background: linear-gradient(to right, #fffffff6, #c2c2c2f1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register-box {
+  color: #000000d4;
+  z-index: 999;
+  background: linear-gradient(to right, #fffffff6, #c2c2c2f1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(191, 111, 111, 0.1);
+  width: 370px;
+  text-align: center;
+}
+
+input {
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+input::placeholder {
+  padding-left: 20px;
+  color: #888;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff64;
+  border: 1px solid #8f8f8fb4;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.input-icon i {
+  position: absolute;
+  padding: 18px;
+  color: #676767f2;
+  font-size: 20px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  background: linear-gradient(to right, #fffffff6, #c9c9c9ce);
+  width: 100%;
+  padding-left: 40px;
+}
+
+.login-google-two {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#ef533e, #b33c2ced);
+  margin: 10px 0;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  box-shadow: 1px 1px 7px 0 rgba(11, 11, 11, 0.835);
+}
+
+.login-google-two:hover {
+  background: linear-gradient(#d74936ee, #8a3226ea);
+}
+
+.google-i-bg {
+  box-shadow: 1px 1px 6px 0 rgba(11, 11, 11, 0.835);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ffffff, #a7a7a7);
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.fa-google {
+  padding-left: 20px;
+  color: #de4530;
+}
+
+.fa-google:hover {
+  color: #bc3b2a;
+}
+
+.register-button-blu {
+  margin-bottom: 12px;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: linear-gradient(#2551eee8, #203da4f5);
+}
+
+.register-button-blu:hover {
+  background: linear-gradient(#264edfe8, #172c77f4);
+}
+
+.divider {
+  margin: 20px 0;
+  color: #090909;
+  text-align: center;
+}
+
+.login-prompt {
+  font-size: 14px;
+  color: #555;
+  margin-top: 20px;
+}

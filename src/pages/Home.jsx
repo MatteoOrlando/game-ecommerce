@@ -1,22 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../styles/Home.css';
+import '../style/Home.css'
 
 function Home() {
   const [categories, setCategories] = useState([]);
   const [featuredProducts, setFeaturedProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const resultCategories = await axios('http://localhost:3001/categories');
-      const resultProducts = await axios('http://localhost:3001/products');
-      setCategories(resultCategories.data);
-      setFeaturedProducts(resultProducts.data);
+      try {
+        const resultCategories = await axios.get('http://localhost:3001/categories');
+        const resultProducts = await axios.get('http://localhost:3001/products');
+        setCategories(resultCategories.data);
+        setFeaturedProducts(resultProducts.data);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
   }, []);
+
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data: {error.message}</p>;
+
 
   return (
     <div className="home-container">
@@ -32,19 +45,16 @@ function Home() {
         </ul>
         <button className="join-now-button">Unisciti a Game Portal!</button>
         <div className="hero-image">
-          <img src="/path/to/your-image.jpg" alt="Game Over" />
+          <img src="/public/assets/Logo-3.webp" alt="Game Over" />
         </div>
       </div>
-      a
+
       <div className="categories-section">
-        <h5>Categoria</h5>
+        <h2>Categorie</h2>
         <div className="categories-container">
           {categories.map((category) => (
             <div key={category.id} className="category-card">
               <Link to={`/products/${category.id}`}>
-                <div className="category-image-wrapper">
-                  <img src={category.image || '/path/to/default-image.jpg'} alt={category.name} />
-                </div>
                 <div className="category-name">{category.name}</div>
               </Link>
             </div>
@@ -53,12 +63,11 @@ function Home() {
       </div>
 
       <div className="featured-products-section">
-        <h3>Prodotti in Evidenza</h3>
+        <h2>Prodotti in Evidenza</h2>
         <div className="products-container">
           {featuredProducts.map((product) => (
             <div key={product.id} className="product-card">
               <Link to={`/product/${product.id}`}>
-                <img src={product.image} alt={product.name} className="product-image" />
                 <div className="product-info">
                   <p className="product-name">{product.name}</p>
                   <p className="product-price">€{product.price}</p>
