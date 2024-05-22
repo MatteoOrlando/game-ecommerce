@@ -1,4 +1,34 @@
 .fixed-navbar {
+  filter: blur(0.3px);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.fixed-navbar-two {
+  filter: blur(0.3px);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar-two {
+  padding-left: 11%;
+  height: 75px;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(to top, #000000cc, #000000);
+  border-bottom: 5px inset #ff5900;
+  box-shadow: 0 3px 10px #180701f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  filter: blur(0.3px);
   width: 100%;
   position: fixed;
   top: 0;
@@ -10,41 +40,81 @@
   height: 75px;
   width: 100%;
   margin: 0;
-  background: linear-gradient(to top, #101010d4, #000000f9);
+  background: linear-gradient(to top, #101010db, #000000fd);
   border-bottom: 5px inset #ff5900;
   box-shadow: 0 3px 10px #180701f0;
 }
 
 .navbar-brand {
-  width: 130px !important;
-  height: 50px !important;
-  margin: auto 30px;
-  padding: 0;
+  margin-left: 2.5%;
+  width: 100px;
 }
 
 .navbar-brand img {
-  width: 130px !important;
-  height: 50px !important;
+  width: 20px !important;
+  height: 30px !important;
+}
+
+.navbar-brand-two {
+  margin-left: 40px;
+  width: 26%;
+}
+
+.navbar-brand-two img {
+  position: relative;
+  z-index: 2000;
+}
+
+.logo-img {
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-icon {
-  font-size: 23px;
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.581);
+  font-size: 25px;
   margin-right: 8px;
 }
 
 .navbar-nav .nav-link {
-  margin-right: 20px;
   font-size: 18px;
+  color: #ddddddf0;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 50px;
+  font-size: 19px;
   color: #ddddddf3;
+  transition: color 0.3s ease;
 }
 
-.log-pos {
-  margin: auto;
-  font-size: 20px;
-}
-
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
   color: #ff5900;
+  .navbar-nav .nav-link:active,
+  .navbar-nav .nav-link.active {
+    color: #ffbf7f;
+  }
+}
+
+.navbar-nav .nav-link-2 {
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link-2 {
+  margin-right: 50px;
+  font-size: 26px;
+  color: #ddddddf3;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link-2:hover,
+.navbar-nav .nav-link-2:focus {
+  color: #ff5900;
+  .navbar-nav .nav-link:active,
+  .navbar-nav .nav-link.active {
+    color: #ffbf7f;
+  }
 }
 
 .search-form {

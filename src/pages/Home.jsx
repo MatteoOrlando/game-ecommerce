@@ -66,16 +66,15 @@ function Home() {
         </div>
         <div className='h1-container'>
           <h1>Benvenuto su Game Portal</h1>
-          <p>Scopri le ultime novità e approfitta di sconti imperdibili su giochi per tutte le piattaforme.</p>
-
+          <p><em>Scopri il nostro catalogo e approfitta di sconti imperdibili su giochi per tutte le piattaforme.</em></p>
         </div>
         <div className='Ul-container'>
           <ul>
             <li>Giochi per PC, console e mobile a <strong>prezzi imbattibili</strong></li>
-            <li>Nuove uscite e classici intramontabili <strong>ogni mese</strong></li>
-            <li><strong>Offerte esclusive</strong> per i membri con vantaggi unici</li>
-            <li>Contribuisci al <strong>bene comune</strong>: il 10% del tuo acquisto va in <strong>beneficenza</strong></li>
-            <li><strong>Nessun impegno</strong>: puoi saltare un mese o annullare quando vuoi</li>
+            <li>Nuove uscite e <em>classici intramontabili</em> <strong>ogni mese</strong></li>
+            <li><strong>Offerte esclusive</strong> per i membri con vantaggi <em>unici</em></li>
+            <li>Contribuisci al <strong>bene comune</strong>: il <em>10%</em> del tuo acquisto va in <strong>beneficenza</strong></li>
+            <li><strong>Nessun impegno</strong>: puoi saltare un mese o <em>annullare</em> quando vuoi</li>
           </ul>
         </div>
         <a href='http://localhost:3000/register' className="join-now-button"><i className="fas fa-user-plus"></i>Unisciti a Game Portal!</a>

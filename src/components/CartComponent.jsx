@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../style/Cart.css'
+import '../style/Cart.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faEuroSign } from '@fortawesome/free-solid-svg-icons';
 
@@ -43,7 +43,6 @@ function CartComponent() {
         setTotalPrice(total);
     };
 
-
     const handleCheckout = async () => {
         console.log('Procedendo al checkout');
 
@@ -82,35 +81,38 @@ function CartComponent() {
         calculateTotal(updatedItems);
     };
 
+    const placeholderImage = "placeholder/image.jpg";
+
     return (
         <div>
             <div className="hero-cart-banner">
                 <div className="cart-container">
                     <div className='orange-bg'>
                         <div className="cart-box">
-                            <h1><FontAwesomeIcon icon={faShoppingCart} className="icon  " /></h1>
+                            <h1><FontAwesomeIcon icon={faShoppingCart} className="icon " /></h1>
                             {items.map(item => (
                                 <div key={item.id} className="cart-item">
-                                    <h2>{item.product.name}</h2>
-                                    <p>Quantità: {item.quantity} </p>
-                                    <p>Prezzo: <FontAwesomeIcon icon={faEuroSign} />  {item.product.price}</p>
-                                    <p>Totale: <FontAwesomeIcon icon={faEuroSign} /> {item.quantity * item.product.price}</p>
+                                    <img
+                                        src={item.product.imageUrl || placeholderImage}
+                                        alt={item.product.name}
+                                        onError={(e) => e.target.src = placeholderImage}
+                                    />
+                                    <h2 className='cart-detail'>{item.product.name}</h2>
+                                    <p className='cart-detail'>Quantità: {item.quantity} </p>
+                                    <p className='cart-detail'>Prezzo: <FontAwesomeIcon icon={faEuroSign} />  {item.product.price}</p>
+                                    <p className='cart-detail'>Totale: <FontAwesomeIcon icon={faEuroSign} /> {item.quantity * item.product.price}</p>
                                     <button onClick={() => handleRemoveItem(item.product.id)} className="remove-item-button">X</button>
                                 </div>
                             ))}
                             <h2 className="cart-total fs-3 ">Totale: <FontAwesomeIcon icon={faEuroSign} /> {totalPrice}</h2>
                             <button className="cart-button" onClick={handleCheckout}>Procedi</button>
-
                         </div>
-
                     </div>
                     <div className="gift-purchase">
                         <input type="checkbox" name="gift" />
                         <label htmlFor="gift">Invia come regalo</label>
                     </div>
-
                 </div>
-
                 <div className="payment-methods">
                     <div className='payment-header'>
                         <span className="payment-icons">
@@ -152,8 +154,7 @@ function CartComponent() {
                     </div>
                 </div>
             </div>
-
-        </div >
+        </div>
     );
 }
 

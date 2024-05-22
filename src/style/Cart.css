@@ -5,7 +5,7 @@
   margin: auto;
   width: 80%;
   background-position: center;
-  max-height: 4500px;
+  max-height: 6500px;
   color: rgb(229, 229, 229);
   display: flex;
   flex-direction: column;
@@ -92,13 +92,13 @@
 .remove-item-button {
   width: 40px;
   margin-bottom: 30px;
-  font-size: 13px;
+  font-size: 12px;
   background: linear-gradient(to top, #87000099, #be0000ea);
   color: rgba(255, 255, 255, 0.898);
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 30px;
   font-weight: bold;
 }
 
@@ -108,28 +108,44 @@
 
 /*---------------------------------------------------------*/
 
+.cart-detail {
+  box-shadow: -8px -7px 13px 0 rgba(0, 0, 0, 0.936);
+  padding: 10px 15px;
+  border-radius: 20px;
+  border-top: 2px inset #9f3801c4;
+  background: linear-gradient(to top, #ffffff07, #000000);
+}
+
 .cart-item {
+  margin-bottom: 70px;
+  max-width: 335px;
+  border-radius: 30px;
+  background: linear-gradient(to top, #ffffff10, #dd4d00e3);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  font-size: 11px;
+  border-top: 2px inset #12121262;
+  border-left: 4px inset #ff5900;
+  margin-top: 40px;
 }
+
 .cart-item h2 {
-  font-size: 45px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 40px;
   margin: 20px 10px;
-  width: 100%;
+  width: 94%;
   text-align: center;
 }
 
 .cart-item p {
-  font-size: 20px;
+  background: linear-gradient(to top, #393939, #000000);
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 15px;
   display: flex;
   margin: 7px 20px;
-  width: 100%;
+  width: 50%;
   align-items: center;
 }
 
@@ -151,13 +167,20 @@
   filter: blur(0.3px);
   box-shadow: -2px -2px 10px 0 rgba(11, 11, 11, 0.835);
   border-radius: 10px;
-  background: linear-gradient(340deg, #3e9600dc, #132d01ef);
+  background: linear-gradient(340deg, #3e9600f0, #245400ea);
 }
 
 .cart-total {
+  box-shadow: -4px -3px 10px 0 rgba(0, 0, 0, 0.936);
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-top: 2px inset #9f3801a3;
+  background: linear-gradient(to top, #ec4b005f, #ff5100);
+
   font-weight: bold;
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 .icon {
@@ -177,7 +200,7 @@
   position: relative;
   border-top: 2px inset #ff5900;
   border-left: 4px inset #ff5900;
-  background: linear-gradient(to top, #0000007c, #000000);
+  background: linear-gradient(to left, #c4c4c4, #ffffff);
   padding: 30px;
   border-radius: 15px;
 }
@@ -404,7 +427,7 @@
   box-shadow: 3px 2px 7px 0 rgba(11, 11, 11, 0.835);
   border-top: 2px inset #ff5900;
   border-left: 4px inset #ff5900;
-  background: linear-gradient(to top, #0000007c, #000000);
+  background: linear-gradient(to left, #bababa, #ffffff);
   border-radius: 15px;
   width: 47%;
   margin: auto;

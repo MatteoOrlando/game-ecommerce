@@ -86,8 +86,10 @@ input[type='password'] {
   display: flex;
   align-items: center;
   background: linear-gradient(#ef533e, #b33c2ced);
-  margin: 10px 0;
-  padding: 10px 20px;
+  margin: 10px auto;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
   color: white;
   font-size: 16px;
   box-shadow: 1px 1px 7px 0 rgba(11, 11, 11, 0.835);
@@ -106,7 +108,8 @@ input[type='password'] {
   border-radius: 30px;
   width: 35px;
   height: 35px;
-  margin-right: 10px;
+  margin-right: 12px;
+  margin-bottom: 13px;
 }
 
 .fa-google {

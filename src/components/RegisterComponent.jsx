@@ -73,7 +73,7 @@ function RegisterComponent() {
                             <span className='google-i-bg'>
                                 <i className="fab fa-google"></i>
                             </span>
-                            REGISTRATI CON <strong>GOOGLE</strong>
+                            <p> REGISTRATI CON <strong> GOOGLE</strong></p>
                         </a>
                         <p className="login-prompt"><em>Hai già un account?</em><a href='http://localhost:3000/login' className='sign-in-link'> <strong>ACCEDI</strong></a></p>
                     </div>

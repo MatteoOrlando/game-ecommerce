@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   z-index: 1000;
-  background: linear-gradient(to bottom, #101010d0, #000000f9);
+  background: linear-gradient(to bottom, #000000cc, #000000);
   color: #fffffff2;
   padding-top: 25px;
   font-family: 'Arial', sans-serif;
@@ -12,9 +12,8 @@
 .footer .footer-container .footer-row {
   display: flex;
   justify-content: space-between;
-  max-width: 1100px;
-
-  margin: 0 auto;
+  max-width: 1300px;
+  margin: 10px auto;
 }
 
 .footer h4 {
@@ -55,13 +54,15 @@
 }
 
 .footer-col svg {
+  margin-bottom: 10px;
   margin-right: 10px;
-  font-size: 24px;
+  font-size: 25px;
 }
 
 .footer-col i {
+  margin-top: 5px;
   margin-right: 10px;
-  font-size: 24px;
+  font-size: 25px;
 }
 
 .footer-social-col {
@@ -69,6 +70,10 @@
   flex-direction: column;
 }
 .footer-socials li a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  margin-bottom: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,17 +85,18 @@
   margin-right: 15px;
 }
 .footer-socials .faFacebookF-foot {
-  font-size: 24px;
+  font-size: 25px;
   background-color: #4267b2;
 }
 
 .footer-socials .faFacebookF-foot:hover {
-  font-size: 30px;
+  font-size: 27px;
   background-color: #385795;
 }
 
 .footer-socials .faInstagram {
-  font-size: 29px;
+  border-radius: 9px;
+  font-size: 32px;
   margin-top: 5px;
   background: radial-gradient(
     circle farthest-corner at 35% 90%,
@@ -102,7 +108,7 @@
 }
 
 .footer-socials .faInstagram:hover {
-  font-size: 33px;
+  font-size: 35px;
   background: radial-gradient(
     circle farthest-corner at 35% 90%,
     #c59b47,
@@ -114,15 +120,17 @@
 
 .footer-socials .faYoutube {
   border-radius: 5px;
-  font-size: 23px;
+  font-size: 24px;
   background-color: #ff0000;
   color: #ffffff;
   padding: 3px;
+  margin-left: -5px;
+  margin-top: 5px;
 }
 
 .footer-socials .faYoutube:hover {
   font-size: 27px;
-  background-color: #a00101;
+  background-color: #a20000;
 }
 
 .copyright {

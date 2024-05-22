@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../style/Login.css';
 import '../components/SecondaryNavbar'
+
 function LoginComponent() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -47,7 +48,7 @@ function LoginComponent() {
                     <button className="login-google">
                         <span className='google-i-bg-2'>
                             <i className="fab fa-google"></i>
-                        </span><span> ACCEDI CON <strong>GOOGLE</strong></span>
+                        </span><span> ACCEDI CON <strong> GOOGLE</strong></span>
                     </button>
                     <button className="login-facebook">
                         <span className='fb-i-bg'>

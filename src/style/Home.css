@@ -21,7 +21,7 @@ body {
   background-size: 100% auto;
   background-position: center;
   background-attachment: fixed;
-  height: 1080px;
+  height: 980px;
   color: rgb(229, 229, 229);
   display: flex;
   flex-direction: column;
@@ -50,19 +50,18 @@ body {
 
 .hero-banner h1 {
   margin-top: 70px;
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .hero-banner p {
-  letter-spacing: 0.5px;
-  font-size: 22.5px;
-  margin-bottom: 95px;
+  letter-spacing: 1.5px;
   text-align: center;
 }
 
 .brand-container {
+  filter: blur(0.5px);
   background-image: url('/public/assets/fe010635-0dff-4975-8a59-7a55b44ca422.webp');
   background-repeat: no-repeat;
   background-size: 140% 235%;
@@ -78,20 +77,41 @@ body {
 }
 
 .h1-container {
-  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 15px;
   margin: auto;
   box-shadow: 8px 15px 35px rgba(0, 0, 0, 0.898);
-  position: relative;
   border-radius: 25px;
-  background: linear-gradient(to top, #00000066, #000000);
-  border-top: 2px inset #ff5900;
+  background: linear-gradient(to top, #00000081, #000000);
+  border-top: 2px inset #ff5900fb;
   border-left: 4px inset #ff5900;
+}
+
+.h1-container h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h1 {
+  filter: blur(0.5px);
+  text-shadow: -1px -1px 0 #000000f9, 1px -1px 0#ff5900, -1px 1px 0 #ff5900f5,
+    1px 1px 0 #ffffff;
+}
+
+.h1-container p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 22px;
 }
 
 .Ul-container {
   margin-top: 50px;
   box-shadow: 8px 15px 35px rgba(0, 0, 0, 0.898);
-  right: 13%;
+  right: 12.5%;
   position: relative;
   border-radius: 25px;
   padding: 15px;
@@ -126,8 +146,7 @@ body {
   text-decoration: none;
   width: 20%;
   font-weight: bold;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 30px 0px;
   background: linear-gradient(to top, #00000088, #000000ef);
   border-top: 1px inset #ff5900;
   border-left: 3px inset #ff5900;

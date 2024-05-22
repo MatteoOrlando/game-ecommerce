@@ -8,7 +8,7 @@ function CustomerServicePage() {
     return (
         <div className='banner-servCustomer'>
             <div className="customer-service">
-                <h1>Servizio Clienti</h1>
+                <h1 className='.h1-container-serv'>Servizio Clienti</h1>
                 <section className="faq">
                     <h2>Domande Frequenti</h2>
                     <div className="faq-item">

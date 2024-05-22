@@ -10,10 +10,7 @@ function ProductList() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-
                 const token = sessionStorage.getItem('token');
-
-
                 const res = await fetch('http://localhost:3001/products', {
                     method: 'GET',
                     headers: {
@@ -27,6 +24,7 @@ function ProductList() {
                 }
 
                 const data = await res.json();
+                console.log(data);
                 setProducts(data);
             } catch (error) {
                 setError(error);
@@ -49,16 +47,25 @@ function ProductList() {
     }
 
     return (
-        <div className="product-list">
-            {products.map(product => (
-                <div key={product.id} className="product-card">
-                    <Link to={`/product/${product.id}`}>
-                        <img src={product.image || placeholderImage} alt={product.name} />
-                        <h3>{product.name}</h3>
-                        <p>€{product.price}</p>
-                    </Link>
+        <div className="home-container-list">
+            <div className="hero-banner-list">
+                <div className='Plist-title'>
+                    <h1>Catalogo Giochi</h1>
+                    <p>...dai un occhiata!</p>
                 </div>
-            ))}
+
+                <div className="product-list">
+                    {products.map(product => (
+                        <div key={product.id} className="product-card">
+                            <Link to={`/product/${product.id}`}>
+                                <img src={product.imageUrl || placeholderImage} alt={product.name} />
+                                <h3>{product.name}</h3>
+                                <p>€{product.price}</p>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }

@@ -1,33 +1,97 @@
+.home-container-list {
+  width: 82%;
+  margin: auto;
+}
+
+.hero-banner-list {
+  position: relative;
+  z-index: 1;
+  background-image: url('/public/assets/banner-prod-list.webp');
+  background-size: 100% auto;
+  background-position: center;
+  max-height: 100%;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 8.4% auto;
+  border-radius: 10px;
+  box-shadow: 8px 0px 60px rgba(10, 3, 0, 0.837);
+}
+
+.hero-banner-list p {
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero-banner-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.124);
+  z-index: 1;
+}
+
+.Plist-title {
+  position: relative;
+  z-index: 200;
+  box-shadow: -8px -7px 13px 0 rgba(0, 0, 0, 0.936);
+  padding: 10px 125px;
+  border-radius: 20px;
+  background: linear-gradient(to top, #00000081, #000000);
+  border-top: 2px inset #ff5900e0;
+  border-left: 4px inset #ff5900;
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+
 .product-list {
+  position: relative;
+  z-index: 200;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 20px;
+  padding: 10px;
 }
 
 .product-card {
-  border: 1px solid #ccc;
+  border-top: 1px inset #ff5900;
+  border-left: 3px inset #ff5900;
+  background-color: #000000b0;
+  min-height: 250px;
+
   border-radius: 10px;
-  margin: 10px;
-  width: 200px;
+  margin: 25px;
+  width: 300px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: -7px -3px 10px rgba(0, 0, 0, 0.834);
 }
 
 .product-card img {
+  padding: 15px;
   width: 100%;
-  height: 150px;
+  height: 420px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .product-card h3 {
-  margin: 10px 0;
+  margin-top: 25px;
+  color: #e5e5e5;
+  font-weight: 900;
 }
 
 .product-card p {
-  color: #666;
+  text-decoration: none !important;
+  margin-top: 10%;
+  font-weight: bold;
+  color: #f6f6f6;
   font-size: 18px;
   margin-bottom: 10px;
 }
