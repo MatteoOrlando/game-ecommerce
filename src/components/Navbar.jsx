@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faInfoCircle, faUserCircle, faSignInAlt, faShoppingBag, faHeadset, faSearch } from '@fortawesome/free-solid-svg-icons';
 import '../style/Navbar.css'
 
 function Navbar() {
@@ -18,16 +18,24 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/products"><strong>Prodotti</strong></Link>
+                                <Link className="nav-link" to="/products">
+                                    <FontAwesomeIcon icon={faShoppingBag} className="nav-icon" /> <strong>Giochi</strong>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/cart"><strong>Carrello</strong></Link>
+                                <Link className="nav-link" to="/cart">
+                                    <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" /> <strong>Carrello</strong>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/customer-service">Servizio clienti</Link>
+                                <Link className="nav-link" to="/customer-service">
+                                    <FontAwesomeIcon icon={faHeadset} className="nav-icon" /> Servizio clienti
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about-us">Chi siamo</Link>
+                                <Link className="nav-link" to="/about-us">
+                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> Chi siamo
+                                </Link>
                             </li>
                         </ul>
                         <form className="search-form">
@@ -37,10 +45,14 @@ function Navbar() {
                         <div className="log-pos">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/login">Accedi</Link>
+                                    <Link className="nav-link" to="/login">
+                                        <FontAwesomeIcon icon={faSignInAlt} className="nav-icon" /> Accedi
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/register">Registrati</Link>
+                                    <Link className="nav-link" to="/register">
+                                        <FontAwesomeIcon icon={faUserCircle} className="nav-icon" /> Registrati
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

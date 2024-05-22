@@ -5,7 +5,7 @@
   margin: auto;
   width: 80%;
   background-position: center;
-  height: 1550px;
+  max-height: 4500px;
   color: rgb(229, 229, 229);
   display: flex;
   flex-direction: column;
@@ -16,6 +16,7 @@
   background: url('/public/assets/cartBanner.webp') no-repeat center center
     fixed;
 }
+
 .hero-cart-banner::before {
   content: '';
   position: absolute;
@@ -27,37 +28,41 @@
   z-index: 10;
 }
 
+/*Carrello Style----------*/
+
 .cart-container {
-  position: absolute;
+  width: 100%;
+  max-width: 600px;
   z-index: 11;
-  height: 96%;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 3%;
 }
 
 .orange-bg {
-  margin: auto;
-  height: 300px;
-  width: 450px;
-  background: linear-gradient(120deg, #ff5900, #030303cb);
-  border-radius: 40px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-    inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  box-shadow: 8px 7px 6px rgba(0, 0, 0, 0.898);
+  border-radius: 25px;
+  background: linear-gradient(to top, #00000078, #0000007a);
+  border-top: 1px inset #ff5900;
+  border-left: 2px inset #ff5900;
 }
 
 .cart-box {
-  margin-left: 4.7%;
-  margin-top: 4.7%;
-  height: 250px;
-  width: 400px;
-  border-top: none;
-  border-radius: 10px;
-  box-shadow: 20px 20px 40px 0 rgba(11, 11, 11, 0.835);
-  padding: 20px;
-  max-width: 600px;
-  background-image: url('/public/assets/18f020e6-e898-4a41-b5c5-fd16d5bf7a3e.webp');
-  color: #030303;
+  min-width: 350px;
+  padding: 20px 20px;
+  margin: auto;
+  box-shadow: 8px 11px 1px rgba(0, 0, 0, 0.898);
+  position: relative;
+  border-radius: 25px;
+  background: linear-gradient(to top, #00000099, #00000092);
+  border-top: 2px inset #ff5900;
+  border-left: 4px inset #ff5900;
+  color: #eaeaeae9;
   font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
@@ -82,18 +87,50 @@
   z-index: 2;
 }
 
+/*---------------------CART PIENO-----------------------------------------------*/
+
+.remove-item-button {
+  width: 40px;
+  margin-bottom: 30px;
+  font-size: 13px;
+  background: linear-gradient(to top, #87000099, #be0000ea);
+  color: rgba(255, 255, 255, 0.898);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.remove-item-button:hover {
+  background: linear-gradient(to top, #ed0202f1, #e20000d5);
+}
+
+/*---------------------------------------------------------*/
+
 .cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 11px;
+}
+.cart-item h2 {
+  font-size: 45px;
+  margin: 20px 10px;
+  width: 100%;
+  text-align: center;
 }
 
-.cart-item h2,
 .cart-item p {
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
-  margin: 5px 0;
+  margin: 7px 20px;
+  width: 100%;
+  align-items: center;
 }
 
 .cart-button {
@@ -101,7 +138,7 @@
   margin-top: 20px;
   box-shadow: 4px 3px 10px 0 rgba(11, 11, 11, 0.835);
   font-weight: bold;
-  background: linear-gradient(130deg, #ff5900f7, #3b1600dc);
+  background: linear-gradient(to top, #ff5900f7, #903500c8);
   color: rgba(255, 255, 255, 0.885);
   border: none;
   border-radius: 8px;
@@ -124,7 +161,8 @@
 }
 
 .icon {
-  filter: blur(0.7px);
+  font-size: 65px;
+  filter: blur(0.4px);
   margin-right: 10px;
   color: #a58a46;
 }
@@ -132,13 +170,15 @@
 /*-----------------Sez. metodo di pagamento---------------------------------*/
 
 .payment-methods {
+  max-width: 600px;
   box-shadow: 4px 3px 20px 0 rgba(11, 11, 11, 0.835);
-  margin-top: 26.5%;
   margin-bottom: 15px;
   z-index: 11;
   position: relative;
-  background: linear-gradient(130deg, #ffffff, #aeaeae);
-  padding: 20px;
+  border-top: 2px inset #ff5900;
+  border-left: 4px inset #ff5900;
+  background: linear-gradient(to top, #0000007c, #000000);
+  padding: 30px;
   border-radius: 15px;
 }
 .payment-header {
@@ -150,7 +190,7 @@
 }
 
 .payment-icons i {
-  filter: blur(0.4px);
+  filter: blur(0.3px);
   margin-left: 30px;
   font-size: 41px;
 }
@@ -253,9 +293,8 @@
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 30px;
-  background: linear-gradient(360deg, #090909e8, #4e4e4e);
+  background: linear-gradient(360deg, #090909fb, #404040f5);
   box-shadow: 3px 2px 7px 0 rgba(11, 11, 11, 0.835);
-  color: #ffffff;
   border: none;
   transition: background 0.2s ease-in-out, transform 0.2s ease;
   display: flex;
@@ -265,7 +304,7 @@
 }
 
 .subscribe-button:hover {
-  background: linear-gradient(360deg, #161616f6, #606060);
+  background: linear-gradient(360deg, #161616f6, #4b4b4b);
   box-shadow: 6px 2px 10px 0 rgba(11, 11, 11, 0.835);
   transform: scale(1.2);
 }
@@ -295,19 +334,31 @@
 }
 
 .gift-purchase {
+  border-top: 2px inset #ff5900;
+  border-left: 4px inset #ff5900;
+  background: linear-gradient(to top, #00000098, #000000);
   font-family: 'Courier New', Courier, monospace;
+  border-radius: 10px;
   margin-left: 30%;
+  margin-right: 31.5%;
   z-index: 10;
   margin-top: 20px;
 }
 
 .gift-purchase input[type='checkbox'] {
-  margin-right: 7px;
+  margin-left: 10px;
+  margin-top: 13px;
+  margin-right: 13px;
 }
 
 .gift-purchase label {
-  color: #ffffffb4;
-  font-size: 16px;
+  font-weight: bold;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: linear-gradient(to top, #f05400fb, #97350193);
+  color: #ffffffc2;
+  font-size: 15px;
 }
 
 /*----------------------------------*/
@@ -317,24 +368,25 @@
   position: relative;
   z-index: 11;
   padding: 10px 30px;
-  background: linear-gradient(340deg, #cdcdcdb1, #ffffff);
-  margin-top: 25px;
+  border-top: 2px inset #ff5900;
+  border-left: 4px inset #ff5900;
+  background: linear-gradient(to top, #00000098, #000000);
+  margin-top: 22.5px;
+  margin-bottom: 30px;
   text-align: center;
   border-radius: 20px;
-  color: rgba(0, 0, 0, 0.773);
-  border-style: outset;
-  border-width: 3px;
-  border-color: #ababab6f;
+  color: rgba(255, 255, 255, 0.859);
 }
+
 .account-access p {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .login-button {
   width: 44%;
   font-weight: bold;
   padding: 10px 20px;
-  background: linear-gradient(360deg, #090909e8, #4e4e4e);
+  background: linear-gradient(360deg, #090909fb, #404040f5);
   box-shadow: 2px 2px 7px 0 rgba(11, 11, 11, 0.835);
   color: rgba(255, 255, 255, 0.931);
   border: none;
@@ -350,12 +402,15 @@
 
 .white {
   box-shadow: 3px 2px 7px 0 rgba(11, 11, 11, 0.835);
+  border-top: 2px inset #ff5900;
+  border-left: 4px inset #ff5900;
+  background: linear-gradient(to top, #0000007c, #000000);
   border-radius: 15px;
   width: 47%;
   margin: auto;
   position: relative;
   z-index: 13;
-  background: linear-gradient(130deg, #ffffffeb, #aeaeae);
+  margin-bottom: 40px;
   padding: 18px 10px;
 }
 

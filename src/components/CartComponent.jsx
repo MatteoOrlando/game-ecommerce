@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import '../style/Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faEuroSign } from '@fortawesome/free-solid-svg-icons';
@@ -16,13 +15,24 @@ function CartComponent() {
                 return;
             }
 
-            const res = await axios.get('http://localhost:3001/cart', {
-                headers: {
-                    Authorization: `Bearer ${token}`
+            try {
+                const res = await fetch('http://localhost:3001/cart', {
+                    method: 'GET',
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    setItems(data);
+                    calculateTotal(data);
+                } else {
+                    throw new Error('Failed to fetch cart items');
                 }
-            });
-            setItems(res.data);
-            calculateTotal(res.data);
+            } catch (error) {
+                console.error('Error fetching cart items:', error);
+            }
         };
 
         fetchCartItems();
@@ -32,6 +42,7 @@ function CartComponent() {
         const total = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
         setTotalPrice(total);
     };
+
 
     const handleCheckout = async () => {
         console.log('Procedendo al checkout');
@@ -45,18 +56,19 @@ function CartComponent() {
         const productIds = items.map(item => item.product.id);
 
         try {
-            const res = await fetch.post('http://localhost:3001/orders', {
-                productIds,
-                totalPrice
-            }, {
+            const res = await fetch('http://localhost:3001/orders', {
+                method: 'POST',
                 headers: {
+                    'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`
-                }
+                },
+                body: JSON.stringify({ productIds, totalPrice })
             });
 
             if (res.status === 201) {
                 alert('Order placed successfully');
-
+            } else {
+                throw new Error('Failed to place order');
             }
         } catch (error) {
             console.error('Error during checkout:', error);
@@ -64,9 +76,14 @@ function CartComponent() {
         }
     };
 
+    const handleRemoveItem = (productId) => {
+        const updatedItems = items.filter(item => item.product.id !== productId);
+        setItems(updatedItems);
+        calculateTotal(updatedItems);
+    };
+
     return (
         <div>
-
             <div className="hero-cart-banner">
                 <div className="cart-container">
                     <div className='orange-bg'>
@@ -76,11 +93,12 @@ function CartComponent() {
                                 <div key={item.id} className="cart-item">
                                     <h2>{item.product.name}</h2>
                                     <p>Quantità: {item.quantity} </p>
-                                    <p>Prezzo: <FontAwesomeIcon icon={faEuroSign} /> {item.product.price}</p>
+                                    <p>Prezzo: <FontAwesomeIcon icon={faEuroSign} />  {item.product.price}</p>
                                     <p>Totale: <FontAwesomeIcon icon={faEuroSign} /> {item.quantity * item.product.price}</p>
+                                    <button onClick={() => handleRemoveItem(item.product.id)} className="remove-item-button">X</button>
                                 </div>
                             ))}
-                            <h2 className="cart-total fs-4 ">Totale: <FontAwesomeIcon icon={faEuroSign} /> {totalPrice}</h2>
+                            <h2 className="cart-total fs-3 ">Totale: <FontAwesomeIcon icon={faEuroSign} /> {totalPrice}</h2>
                             <button className="cart-button" onClick={handleCheckout}>Procedi</button>
 
                         </div>
@@ -88,7 +106,7 @@ function CartComponent() {
                     </div>
                     <div className="gift-purchase">
                         <input type="checkbox" name="gift" />
-                        <label htmlFor="gift">Invia come regalo.</label>
+                        <label htmlFor="gift">Invia come regalo</label>
                     </div>
 
                 </div>
@@ -119,9 +137,9 @@ function CartComponent() {
                     </div>
                 </div>
                 <div className="account-access">
-                    <p>Devi aver effettuato l'accesso per acquistare</p>
+                    <p><strong><em>Devi aver effettuato l'accesso per gli acuisti</em></strong></p>
                     <button className="login-button">Accedi</button>
-                    <p>Iscriviti per saperne di più sulle offerte!</p>
+                    <p>Iscriviti per saperne di più sulle nostre offerte!</p>
                 </div>
                 <div className='white'>
                     <div className="newsletter-section">

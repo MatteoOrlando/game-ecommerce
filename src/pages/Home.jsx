@@ -78,7 +78,7 @@ function Home() {
             <li><strong>Nessun impegno</strong>: puoi saltare un mese o annullare quando vuoi</li>
           </ul>
         </div>
-        <a href='http://localhost:3000/register' className="join-now-button">Unisciti a Game Portal!</a>
+        <a href='http://localhost:3000/register' className="join-now-button"><i className="fas fa-user-plus"></i>Unisciti a Game Portal!</a>
         <div className="hero-image">
           <img src="" alt="Game Over" />
         </div>

@@ -18,9 +18,9 @@ body {
   position: relative;
   z-index: 1;
   background-image: url('/public/assets/DALL·E 2024-05-16 13.11.58 -.webp');
-  background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  background-attachment: fixed;
   height: 1080px;
   color: rgb(229, 229, 229);
   display: flex;
@@ -89,9 +89,9 @@ body {
 }
 
 .Ul-container {
-  margin-top: 70px;
+  margin-top: 50px;
   box-shadow: 8px 15px 35px rgba(0, 0, 0, 0.898);
-  right: 19%;
+  right: 13%;
   position: relative;
   border-radius: 25px;
   padding: 15px;
@@ -107,20 +107,27 @@ body {
   padding: 0;
   align-self: flex-start;
   margin-left: 100px;
+  margin-top: 16px;
 }
 
 .hero-banner ul li {
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 /* BUTTON JOIN ------------------------------*/
+
+.fa-user-plus {
+  font-size: 20px;
+  margin-right: 13px;
+}
 
 .join-now-button {
   text-decoration: none;
   width: 20%;
   font-weight: bold;
-  padding: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: linear-gradient(to top, #00000088, #000000ef);
   border-top: 1px inset #ff5900;
   border-left: 3px inset #ff5900;
@@ -197,7 +204,7 @@ body {
   width: 200px;
   margin: 10px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid #212121;
 }
 
 .category-card:hover,

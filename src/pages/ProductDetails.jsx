@@ -68,21 +68,30 @@ function ProductDetails() {
         }
 
         try {
-            const res = await fetch.post(`http://localhost:3001/cart`, {
-                productId: id,
-                quantity
-            }
+            const res = await fetch(`http://localhost:3001/cart`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    productId: id,
+                    quantity
+                })
+            });
 
-            );
-
-            if (res.status === 201) {
+            if (res.ok) {
+                const data = await res.json();
                 alert('Product added to cart');
+            } else {
+                throw new Error('Failed to add product to cart');
             }
         } catch (error) {
             console.error('Error adding product to cart:', error);
             alert('Failed to add product to cart');
         }
     };
+
 
     return (
         <div>

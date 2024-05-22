@@ -5,6 +5,7 @@
   left: 0;
   z-index: 100;
 }
+
 .navbar {
   height: 75px;
   width: 100%;
@@ -13,6 +14,7 @@
   border-bottom: 5px inset #ff5900;
   box-shadow: 0 3px 10px #180701f0;
 }
+
 .navbar-brand {
   width: 130px !important;
   height: 50px !important;
@@ -23,6 +25,11 @@
 .navbar-brand img {
   width: 130px !important;
   height: 50px !important;
+}
+
+.nav-icon {
+  font-size: 23px;
+  margin-right: 8px;
 }
 
 .navbar-nav .nav-link {
@@ -67,7 +74,7 @@
   right: 13px;
   top: 50%;
   transform: translateY(-50%);
-  color: #ff59009b;
+  color: #ff5900af;
   cursor: pointer;
 }
 
@@ -82,7 +89,7 @@
 }
 
 .form-control:hover {
-  background-color: #000000e5;
+  background-color: #000000;
 }
 
 .btn-outline {
@@ -101,6 +108,12 @@
 }
 
 /* Responsiveness */
+
+@media (max-width: 768px) {
+  .nav-icon {
+    margin-right: 5px;
+  }
+}
 
 @media (max-width: 992px) {
   .navbar {
