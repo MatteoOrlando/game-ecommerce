@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../style/Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faInfoCircle, faUserCircle, faSignInAlt, faShoppingBag, faHeadset, } from '@fortawesome/free-solid-svg-icons';
+import { ReactComponent as Logo } from '../style/Logo/logo gameportal.svg';
 
 function SecondaryNavbar() {
     return (
@@ -15,14 +16,6 @@ function SecondaryNavbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item-two">
-                                <Link className="nav-link" to="/products">
-                                    <FontAwesomeIcon icon={faShoppingBag} className="nav-icon" /> <strong>Giochi</strong>
-                                </Link>
-                            </li>
-                            <li className="nav-item-two">
-                                <Link className="nav-link" to="/cart">
-                                    <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" /> <strong>Carrello</strong>
-                                </Link>
                             </li>
                             <li className="nav-item-two">
                                 <Link className="nav-link" to="/customer-service">
@@ -36,7 +29,7 @@ function SecondaryNavbar() {
                             </li>
                         </ul>
                         <Link className="navbar-brand-two" to="/">
-                            <img src="/public/assets/fe010635-0dff-4975-8a59-7a55b44ca422.webp" alt="LOGO" className='logo-img' />
+                            <Logo id='logo-nav' src="/src/style/Logo/logo gameportal.svg" alt="" />
                         </Link>
                         <div className="log-pos">
                             <ul className="navbar-nav">

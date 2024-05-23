@@ -11,15 +11,11 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-
         const token = sessionStorage.getItem('token');
-
-
         const headers = {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
         };
-
 
         const resCategories = await fetch('http://localhost:3001/categories', {
           method: 'GET',
@@ -31,18 +27,18 @@ function Home() {
           headers: headers
         });
 
-
         if (!resCategories.ok || !resProducts.ok) {
           throw new Error('Network response was not ok');
         }
 
-
         const dataCategories = await resCategories.json();
         const dataProducts = await resProducts.json();
 
+        const shuffledProducts = dataProducts.sort(() => 0.5 - Math.random());
+        const selectedProducts = shuffledProducts.slice(0, 8);
 
         setCategories(dataCategories);
-        setFeaturedProducts(dataProducts);
+        setFeaturedProducts(selectedProducts);
       } catch (error) {
         setError(error);
       } finally {
@@ -50,10 +46,8 @@ function Home() {
       }
     };
 
-
     fetchData();
   }, []);
-
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data: {error.message}</p>;
@@ -102,6 +96,7 @@ function Home() {
           {featuredProducts.map((product) => (
             <div key={product.id} className="product-card">
               <Link to={`/product/${product.id}`}>
+                <img src={product.imageUrl} alt={product.name} />
                 <div className="product-info">
                   <p className="product-name">{product.name}</p>
                   <p className="product-price">€{product.price}</p>

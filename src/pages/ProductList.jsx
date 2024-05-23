@@ -1,6 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/ProductList.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+
+function shuffleArray(array) {
+    let currentIndex = array.length, randomIndex;
+
+    //rimangono elementi da mescolare finché non uguali a 0
+    while (currentIndex !== 0) {
+
+        // qui prendo un elemento rimanente
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // e lo scambio (random) con l'elemento corrente di pos.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
 
 function ProductList() {
     const [products, setProducts] = useState([]);
@@ -24,8 +44,8 @@ function ProductList() {
                 }
 
                 const data = await res.json();
-                console.log(data);
-                setProducts(data);
+                const shuffledData = shuffleArray(data); //qui eseguo lo shuffle nell array.
+                setProducts(shuffledData);
             } catch (error) {
                 setError(error);
             } finally {
@@ -60,7 +80,10 @@ function ProductList() {
                             <Link to={`/product/${product.id}`}>
                                 <img src={product.imageUrl || placeholderImage} alt={product.name} />
                                 <h3>{product.name}</h3>
-                                <p>€{product.price}</p>
+                                <div className="price-and-icon">
+                                    <p><i className="fas fa-euro-sign"></i> {product.price}</p>
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} className="detail-icon" />
+                                </div>
                             </Link>
                         </div>
                     ))}

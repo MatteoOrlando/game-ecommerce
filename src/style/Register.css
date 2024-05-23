@@ -77,7 +77,7 @@ input::placeholder {
 input[type='text'],
 input[type='email'],
 input[type='password'] {
-  background: linear-gradient(to right, #fffffff6, #cacacace);
+  background: linear-gradient(to right, #fffffff6, #bababae2);
   width: 100%;
   padding-left: 35px;
 }

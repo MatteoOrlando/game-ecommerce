@@ -16,18 +16,26 @@
   z-index: 100;
 }
 
+.navbar {
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(to top, #101010db, #000000fd);
+  border-bottom: 5px inset #ff5900;
+  box-shadow: 0 3px 10px #180701f0;
+}
+
 .navbar-two {
-  padding-left: 11%;
-  height: 75px;
+  padding-right: 3.5%;
+  padding-left: 4.5%;
+  height: 90px;
   width: 100%;
   margin: 0;
   background: linear-gradient(to top, #000000cc, #000000);
   border-bottom: 5px inset #ff5900;
   box-shadow: 0 3px 10px #180701f0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 70px;
   filter: blur(0.3px);
   width: 100%;
   position: fixed;
@@ -36,38 +44,20 @@
   z-index: 100;
 }
 
-.navbar {
-  height: 75px;
-  width: 100%;
-  margin: 0;
-  background: linear-gradient(to top, #101010db, #000000fd);
-  border-bottom: 5px inset #ff5900;
-  box-shadow: 0 3px 10px #180701f0;
-}
-
 .navbar-brand {
-  margin-left: 2.5%;
-  width: 100px;
-}
-
-.navbar-brand img {
-  width: 20px !important;
-  height: 30px !important;
+  margin-left: auto;
+  width: 250px;
 }
 
 .navbar-brand-two {
-  margin-left: 40px;
-  width: 26%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 265px;
 }
 
 .navbar-brand-two img {
   position: relative;
   z-index: 2000;
-}
-
-.logo-img {
-  position: relative;
-  z-index: 1000;
 }
 
 .nav-icon {
@@ -113,7 +103,7 @@
   color: #ff5900;
   .navbar-nav .nav-link:active,
   .navbar-nav .nav-link.active {
-    color: #ffbf7f;
+    color: #ffa953;
   }
 }
 
