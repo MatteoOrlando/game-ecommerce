@@ -92,6 +92,7 @@
 /*---------------------------------------------------------*/
 
 .product-card-two {
+  margin-bottom: 50px;
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   z-index: 300;
@@ -176,7 +177,7 @@
   filter: blur(0.3px);
   box-shadow: -2px -2px 10px 0 rgba(11, 11, 11, 0.804);
   border-radius: 10px;
-  background: linear-gradient(340deg, #3e9600f0, #245400ea);
+  background: linear-gradient(340deg, #49ad01f0, #245400ea);
 }
 
 .cart-total {
@@ -187,8 +188,7 @@
   border-top: 2px inset #9f3801a3;
   background: linear-gradient(to top, #fffffffa, #bbbbbbf7);
   font-weight: 900;
-
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 15px;
 }
 
@@ -215,7 +215,7 @@
   font-size: 80px;
   filter: blur(0.4px);
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #a58a46;
 }
 
@@ -505,18 +505,62 @@
   background: linear-gradient(360deg, #0f0f0ff6, #6c6c6c);
 }
 
+@media (max-width: 768px) {
+  .hero-cart-banner,
+  .cart-box,
+  .payment-methods,
+  .promotion,
+  .newsletter-section {
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .cart-box,
+  .payment-methods,
+  .promotion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-button,
+  .payment-button,
+  .subscribe-button {
+    width: 80%;
+    padding: 12px;
+  }
+
+  .product-card-two,
+  .cart-box,
+  .payment-methods {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35);
+  }
+
+  .newsletter-section input[type='email'],
+  .newsletter-section button {
+    width: 90%;
+  }
+}
+
 @media (max-width: 480px) {
-  .cart-container {
-    padding-top: 10px;
+  .hero-cart-banner,
+  .cart-box,
+  .payment-methods,
+  .promotion,
+  .newsletter-section {
+    width: 100%;
   }
 
   .cart-box {
-    width: 100%;
-    border: none;
     background-color: rgba(215, 192, 192, 0.9);
+    padding: 10px;
+    border: none;
   }
 
-  .cart-button {
+  .cart-button,
+  .payment-button,
+  .subscribe-button {
     width: 100%;
   }
 }

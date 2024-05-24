@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../style/Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faUserCircle, faSignInAlt, faHeadset, } from '@fortawesome/free-solid-svg-icons';
-import { ReactComponent as Logo } from '../style/Logo/logo gameportal.svg';
+import { ReactComponent as Logo } from '../assets/logo gameportal.svg';
 
 function SecondaryNavbar() {
     return (
@@ -29,7 +29,7 @@ function SecondaryNavbar() {
                             </li>
                         </ul>
                         <Link className="navbar-brand-two" to="/">
-                            <Logo id='logo-nav' src="/src/style/Logo/logo gameportal.svg" alt="" />
+                            <Logo id='logo-nav' src="../assets/logo gameportal.svg" alt="" />
                         </Link>
 
                         <div className="log-pos">

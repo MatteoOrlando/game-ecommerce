@@ -35,7 +35,7 @@ function Home() {
         const dataProducts = await resProducts.json();
 
         const shuffledProducts = dataProducts.sort(() => 0.5 - Math.random());
-        const selectedProducts = shuffledProducts.slice(0, 8);
+        const selectedProducts = shuffledProducts.slice(0, 6);
 
 
         setFeaturedProducts(selectedProducts);
@@ -64,11 +64,11 @@ function Home() {
         </div>
         <div className='Ul-container'>
           <ul>
-            <li>Giochi per PC, console e mobile a <strong>prezzi imbattibili</strong></li>
-            <li>Nuove uscite e <em>classici intramontabili</em> <strong>ogni mese</strong></li>
-            <li><strong>Offerte esclusive</strong> per i membri con vantaggi <em>unici</em></li>
-            <li>Contribuisci al <strong>bene comune</strong>: il <em>10%</em> del tuo acquisto va in <strong>beneficenza</strong></li>
-            <li><strong>Nessun impegno</strong>: puoi saltare un mese o <em>annullare</em> quando vuoi</li>
+            <li>Giochi per PC, console e mobile a <strong className='golden'>prezzi imbattibili</strong ></li>
+            <li>Nuove uscite e <em>classici intramontabili</em> <strong className='golden'>ogni mese</strong></li>
+            <li><strong className='golden' >Offerte esclusive</strong> per i membri con vantaggi <em>unici</em></li>
+            <li>Contribuisci al <strong className='golden'>bene comune</strong>: il <em>10%</em> del tuo acquisto va in <strong className='golden'>beneficenza</strong></li>
+            <li><strong className='golden'>Nessun impegno</strong>: puoi saltare un mese o <em>annullare</em> quando vuoi</li>
           </ul>
         </div>
         <a href='http://localhost:3000/register' className="join-now-button"><i className="fas fa-user-plus"></i>Unisciti a Game Portal!</a>

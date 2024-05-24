@@ -86,7 +86,7 @@ body {
   margin: auto;
   box-shadow: 8px 15px 35px rgba(0, 0, 0, 0.898);
   border-radius: 25px;
-  background: linear-gradient(to top, #00000081, #000000);
+  background: linear-gradient(to top, #00000096, #000000);
   border-top: 2px inset #ff5900fb;
   border-left: 4px inset #ff5900;
 }
@@ -115,9 +115,15 @@ h1 {
   position: relative;
   border-radius: 25px;
   padding: 15px;
-  background: linear-gradient(to top, #00000066, #000000);
+  background: linear-gradient(to top, #000000ac, #000000);
   border-top: 2px inset #ff5900;
   border-left: 4px inset #ff5900;
+}
+
+.golden {
+  background: -webkit-linear-gradient(#ffffff, #e16901);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-banner ul {
@@ -206,8 +212,9 @@ h1 {
 /*FINE HERO-BANNER--------------------------------------*/
 
 .sub-h2 {
-  background: linear-gradient(to right, #020202ad, #000000ed);
-  margin-bottom: 45px;
+  background: linear-gradient(to top, #000000af, #000000);
+  margin-bottom: 50px;
+  margin-top: -10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -248,8 +255,6 @@ h1 {
   background-attachment: fixed;
 }
 
-.featured-products-section::before {
-}
 .categories-container,
 .products-container {
   gap: 40px;
@@ -284,17 +289,18 @@ h1 {
 
 .category-image-wrapper,
 .product-image {
+  box-shadow: 5px 2px 12px rgba(0, 0, 0, 0.8), inset 0px -13px 21px #ff4400;
   gap: 10px;
   width: 80%;
   min-height: 75%;
-  max-height: 70%;
+  max-height: 75%;
   object-fit: fill;
   margin-left: 10%;
   margin-top: 2.5%;
   border-top: 2px inset #ea5600e1;
   border-left: 4px inset #bf4300cf;
   border-bottom: 6px groove #aa3e00ec;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .category-name,
@@ -317,7 +323,7 @@ h1 {
   font-size: 24px;
   font-weight: 900;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.898);
-  background: -webkit-linear-gradient(#111111, #4d4d4d);
+  background: -webkit-linear-gradient(#111111, #303030);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -328,86 +334,101 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000000;
+  color: #ffffffe9;
   font-weight: 900;
+  font-size: 20px;
 }
 
 /*  responsiveness  */
 
 @media (max-width: 1024px) {
-  .home-container {
-    width: 90%;
+  .home-container,
+  .brand-container,
+  .hero-banner,
+  .categories-section,
+  .featured-products-section {
+    width: 95%;
+    padding: 20px;
   }
 
   .hero-banner {
-    height: 600px;
-    padding: 0 20px;
+    height: auto;
+    margin: 50px auto 30px;
   }
 
-  .hero-banner h1 {
-    font-size: 40px;
+  .hero-banner h1,
+  .sub-h2 h2 {
+    font-size: 36px;
   }
 
-  .hero-banner p {
-    font-size: 18px;
+  .product-card-home,
+  .product-card {
+    width: 100%;
+    margin: 10px 0;
   }
 
-  .hero-banner ul {
-    margin-left: 50px;
-  }
-
-  .join-now-button {
-    width: 30%;
-    margin-top: 50px;
-  }
-
-  .hero-image {
-    max-width: 150px;
+  .product-info .product-name,
+  .product-info .product-price {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
+  .hero-banner,
+  .brand-container,
+  .sub-h2 {
+    background-attachment: scroll;
+  }
+
+  .hero-banner ul,
+  .Ul-container,
   .categories-container,
   .products-container {
     flex-direction: column;
     align-items: center;
+    padding: 15px;
   }
 
-  .category-card,
-  .product-card {
-    width: 90%;
-    margin: 10px auto;
+  .hero-banner ul li,
+  .product-card-home a,
+  .category-name,
+  .product-info a {
+    font-size: 18px;
   }
 
-  .hero-banner ul {
-    align-self: center;
-    text-align: center;
-    margin-left: 0;
+  .join-now-button {
+    width: 80%;
+    padding: 20px 0;
   }
 }
 
 @media (max-width: 480px) {
   .hero-banner {
-    height: 400px;
-  }
-
-  .hero-banner h1 {
-    font-size: 24px;
-  }
-
-  .hero-banner p,
-  .hero-banner ul li {
-    font-size: 16px;
-  }
-
-  .join-now-button {
-    width: 80%;
-    font-size: 16px;
     padding: 10px;
+    margin: 20px auto;
   }
 
-  .hero-image {
-    max-width: 100px;
-    right: 10px;
+  .hero-banner h1,
+  .sub-h2 h2 {
+    font-size: 28px;
+  }
+
+  .hero-image img,
+  .category-image-wrapper img,
+  .product-image img {
+    width: 100%;
+  }
+
+  .join-now-button,
+  .footer-section button,
+  .footer-section input[type='email'] {
+    width: 100%;
+    font-size: 16px;
+    padding: 15px 0;
+  }
+
+  .footer-section {
+    padding: 15px;
+    text-align: center;
   }
 }

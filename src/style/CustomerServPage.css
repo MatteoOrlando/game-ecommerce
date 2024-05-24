@@ -162,3 +162,50 @@
   width: 1.5em;
   height: 1.25em;
 }
+
+@media (max-width: 768px) {
+  .banner-servCustomer,
+  .customer-service,
+  .contact {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .customer-service,
+  .contact {
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .faq-item p,
+  .contact p {
+    font-size: 0.9rem;
+  }
+
+  .customer-service h1,
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-servCustomer {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .customer-service h1,
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-item,
+  .contact {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .contact li {
+    flex-direction: column;
+  }
+}

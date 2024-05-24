@@ -68,7 +68,13 @@ function ProductList() {
                     <h1>Catalogo Giochi</h1>
                     <p>...dai un occhiata!</p>
                 </div>
-
+                <div className="pagination">
+                    {[...Array(Math.ceil(products.length / productsPerPage)).keys()].map(number => (
+                        <button key={number + 1} onClick={() => paginate(number + 1)}><em></em>
+                            {number + 1}
+                        </button>
+                    ))}
+                </div>
                 <div className="product-list">
                     {currentProducts.map(product => (
                         <div key={product.id} className="product-card">
@@ -81,15 +87,15 @@ function ProductList() {
                                 </div>
                             </Link>
                         </div>
-                    ))}
+                    ))}<div className="pagination mt-5 ">
+                        {[...Array(Math.ceil(products.length / productsPerPage)).keys()].map(number => (
+                            <button key={number + 1} onClick={() => paginate(number + 1)}><em></em>
+                                {number + 1}
+                            </button>
+                        ))}
+                    </div>
                 </div>
-                <div className="pagination">
-                    {[...Array(Math.ceil(products.length / productsPerPage)).keys()].map(number => (
-                        <button key={number + 1} onClick={() => paginate(number + 1)}><em>page </em>
-                            {number + 1}
-                        </button>
-                    ))}
-                </div>
+
             </div>
         </div>
     );

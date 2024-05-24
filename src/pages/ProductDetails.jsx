@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import '../style/Details.css'
 
 
 function ProductDetails() {
@@ -92,33 +93,44 @@ function ProductDetails() {
             alert('Failed to add product to cart');
         }
     };
-
+    const renderStars = (rating) => {
+        const stars = [];
+        for (let i = 0; i < 5; i++) {
+            if (i < rating) {
+                stars.push(<i key={i} className="fas fa-star" style={{ color: 'gold' }}></i>);
+            } else {
+                stars.push(<i key={i} className="far fa-star" style={{ color: 'gold' }}></i>);
+            }
+        }
+        return stars;
+    };
 
     return (
         <div className="product-detail-container">
-            <h1>{product.name}</h1>
-            <img src={product.image} alt={product.name} />
-            <p>{product.description}</p>
-            <h2 className="product-price">€{product.price}</h2>
-            <input
-                type="number"
-                value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
-                min="1"
-                max="10"
-            />
-            <button onClick={addToCart}>Add to Cart</button>
-            <div className="reviews-container">
-                <h3>Reviews</h3>
-                {reviews.map(review => (
-                    <div key={review.id} className="review">
-                        <h4>{review.rating} Stars</h4>
-                        <p>{review.comment}</p>
-                    </div>
-                ))}
+            <div className='hero-detail'>
+                <h1>{product.name}</h1>
+                <img src={product.imageUrl} alt={product.name} />
+                <p>{product.description}</p>
+                <h2 className="product-price">€{product.price}</h2>
+                <input
+                    type="number"
+                    value={quantity}
+                    onChange={(e) => setQuantity(e.target.value)}
+                    min="1"
+                    max="10"
+                />
+                <button onClick={addToCart}>Add to Cart</button>
+                <div className="reviews-container">
+                    <h3>Reviews</h3>
+                    {reviews.map(review => (
+                        <div key={review.id} className="review">
+                            <h4>{renderStars(review.rating)}</h4>
+                            <p>@Franco688:"{review.comment}"</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
-
     );
 }
 

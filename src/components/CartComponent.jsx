@@ -138,7 +138,7 @@ function CartComponent() {
                     </div>
                 </div>
                 <div className="account-access">
-                    <p><strong><em>Devi aver effettuato l'accesso per gli acuisti</em></strong></p>
+                    <p><strong><em>Devi aver effettuato l'accesso per gli acquisti</em></strong></p>
                     <button className="login-button">Accedi</button>
                     <p>Iscriviti per saperne di più sulle nostre offerte!</p>
                 </div>

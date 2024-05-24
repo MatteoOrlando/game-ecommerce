@@ -1,10 +1,11 @@
 .reg-container {
   position: relative;
+  background-size: cover;
   z-index: 3;
   box-shadow: 8px -8px 35px rgba(10, 3, 0, 0.837);
   width: 80%;
   background-position: center;
-  height: 725px;
+  height: 730px;
   margin-bottom: 80px;
   margin: 6.5% auto;
   margin-bottom: 3%;
@@ -151,4 +152,69 @@ input[type='password'] {
 
 .sign-in-link:hover {
   color: #1f3fb4;
+}
+
+@media (max-width: 1024px) {
+  .reg-container {
+    width: 90%;
+  }
+
+  .register-box,
+  .card-box-register {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .reg-container {
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px 0;
+  }
+
+  .register-box,
+  .card-box-register {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  .input-icon {
+    margin: 10px 0;
+    width: calc(100% - 20px);
+  }
+
+  .input-icon i {
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reg-container {
+    margin-top: 20px;
+  }
+
+  .register-box,
+  .card-box-register {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .login-google-two,
+  .register-button-blu {
+    width: 100%;
+  }
+
+  input,
+  .input-icon {
+    font-size: 16px;
+  }
+
+  .divider,
+  .login-prompt,
+  .sign-in-link {
+    font-size: 16px;
+  }
 }
