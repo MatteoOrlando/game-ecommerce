@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faInfoCircle, faUserCircle, faSignInAlt, faShoppingBag, faHeadset, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faInfoCircle, faUserCircle, faSignInAlt, faShoppingBag, faHeadset, faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import '../style/Navbar.css'
 import { ReactComponent as Logo } from '../assets/logo gameportal.svg';
 
@@ -10,12 +10,12 @@ function Navbar() {
         <div className='fixed-navbar'>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">
-                        <Logo id='logo-nav' src="../assets/logo gameportal.svg" alt="" />
-                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <FontAwesomeIcon icon={faBars} className="navbar-toggler-icon" />
                     </button>
+                    <Link className="navbar-brand" to="/">
+                        <Logo id='logo-nav' src="../assets/logo gameportal.svg" alt="GamePortal Logo" />
+                    </Link>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
@@ -35,7 +35,7 @@ function Navbar() {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about-us">
-                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> About Me
+                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> About Us
                                 </Link>
                             </li>
                         </ul>
