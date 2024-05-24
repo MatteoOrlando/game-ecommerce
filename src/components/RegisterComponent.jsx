@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../style/Register.css';
-
+import { useNavigate } from 'react-router-dom';
 
 
 function RegisterComponent() {
@@ -11,6 +11,8 @@ function RegisterComponent() {
         name: '',
         surname: ''
     });
+
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -30,16 +32,23 @@ function RegisterComponent() {
                 body: JSON.stringify(userData),
                 mode: 'cors'
             });
+
             if (response.ok) {
                 const data = await response.json();
-                alert('Registration successful');
+                alert(`Registration successful. Welcome, ${data.username}!`);
+                sessionStorage.setItem('token', data.token);
+
+                navigate('/');
             } else {
+
                 throw new Error('Failed to register');
             }
         } catch (error) {
-            alert('Registration failed');
+
+            alert(error.message || 'Registration failed');
         }
-    };
+    }
+
 
     return (
         <div className="reg-container">

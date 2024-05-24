@@ -55,24 +55,23 @@
   width: 265px;
 }
 
-.navbar-brand-two img {
-  position: relative;
-  z-index: 2000;
+#logo-nav {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+#logo-nav:hover {
+  filter: brightness(1.4);
+  transform: scale(1.05);
 }
 
 .nav-icon {
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.581);
-  font-size: 25px;
-  margin-right: 8px;
+  font-size: 28px;
+  margin-right: 5px;
 }
 
 .navbar-nav .nav-link {
-  font-size: 18px;
-  color: #ddddddf0;
-}
-
-.navbar-nav .nav-link {
-  margin-right: 50px;
+  margin-right: 17px;
   font-size: 19px;
   color: #ddddddf3;
   transition: color 0.3s ease;
@@ -110,7 +109,7 @@
 .search-form {
   position: relative;
   max-width: 100%;
-  width: 420px;
+  width: 370px;
   margin: auto auto;
 }
 

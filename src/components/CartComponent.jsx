@@ -9,7 +9,7 @@ function CartComponent() {
 
     useEffect(() => {
         const fetchCartItems = async () => {
-            const token = sessionStorage.getItem('token');
+            const token = localStorage.getItem('token');
             if (!token) {
                 alert('Please log in to view your cart');
                 return;
@@ -46,7 +46,7 @@ function CartComponent() {
     const handleCheckout = async () => {
         console.log('Procedendo al checkout');
 
-        const token = sessionStorage.getItem('token');
+        const token = localStorage.getItem('token');
         if (!token) {
             alert('Please log in to proceed with checkout');
             return;
@@ -91,16 +91,15 @@ function CartComponent() {
                         <div className="cart-box">
                             <h1><FontAwesomeIcon icon={faShoppingCart} className="icon " /></h1>
                             {items.map(item => (
-                                <div key={item.id} className="cart-item">
-                                    <img
+                                <div key={item.id} className="product-card-two">
+                                    <img className='cart-imgCart'
                                         src={item.product.imageUrl || placeholderImage}
                                         alt={item.product.name}
                                         onError={(e) => e.target.src = placeholderImage}
                                     />
                                     <h2 className='cart-detail'>{item.product.name}</h2>
-                                    <p className='cart-detail'>Quantità: {item.quantity} </p>
-                                    <p className='cart-detail'>Prezzo: <FontAwesomeIcon icon={faEuroSign} />  {item.product.price}</p>
-                                    <p className='cart-detail'>Totale: <FontAwesomeIcon icon={faEuroSign} /> {item.quantity * item.product.price}</p>
+                                    <p className='cart-detail-1'>Quantità: {item.quantity} </p>
+                                    <p className='cart-detail-1'>Prezzo: <FontAwesomeIcon icon={faEuroSign} />  {item.product.price}</p>
                                     <button onClick={() => handleRemoveItem(item.product.id)} className="remove-item-button">X</button>
                                 </div>
                             ))}

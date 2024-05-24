@@ -4,35 +4,29 @@ import '../style/ProductList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-function shuffleArray(array) {
-    let currentIndex = array.length, randomIndex;
-
-    //rimangono elementi da mescolare finché non uguali a 0
+function shuffleArray(product) {
+    let currentIndex = product.length, randomIndex;
     while (currentIndex !== 0) {
-
-        // qui prendo un elemento rimanente
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
-
-        // e lo scambio (random) con l'elemento corrente di pos.
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
+        [product[currentIndex], product[randomIndex]] = [
+            product[randomIndex], product[currentIndex]];
     }
-
-    return array;
+    return product;
 }
 
 function ProductList() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [productsPerPage] = useState(12);
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const token = sessionStorage.getItem('token');
+                const token = localStorage.getItem('token');
                 const res = await fetch('http://localhost:3001/products', {
-                    method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json'
@@ -44,7 +38,7 @@ function ProductList() {
                 }
 
                 const data = await res.json();
-                const shuffledData = shuffleArray(data); //qui eseguo lo shuffle nell array.
+                const shuffledData = shuffleArray(data);
                 setProducts(shuffledData);
             } catch (error) {
                 setError(error);
@@ -56,15 +50,16 @@ function ProductList() {
         fetchProducts();
     }, []);
 
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+
+    const paginate = pageNumber => setCurrentPage(pageNumber);
+
     const placeholderImage = "placeholder/image.jpg";
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    }
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error.message}</div>;
 
     return (
         <div className="home-container-list">
@@ -75,7 +70,7 @@ function ProductList() {
                 </div>
 
                 <div className="product-list">
-                    {products.map(product => (
+                    {currentProducts.map(product => (
                         <div key={product.id} className="product-card">
                             <Link to={`/product/${product.id}`}>
                                 <img src={product.imageUrl || placeholderImage} alt={product.name} />
@@ -86,6 +81,13 @@ function ProductList() {
                                 </div>
                             </Link>
                         </div>
+                    ))}
+                </div>
+                <div className="pagination">
+                    {[...Array(Math.ceil(products.length / productsPerPage)).keys()].map(number => (
+                        <button key={number + 1} onClick={() => paginate(number + 1)}><em>page </em>
+                            {number + 1}
+                        </button>
                     ))}
                 </div>
             </div>

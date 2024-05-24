@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../style/Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faInfoCircle, faUserCircle, faSignInAlt, faShoppingBag, faHeadset, } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle, faUserCircle, faSignInAlt, faHeadset, } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as Logo } from '../style/Logo/logo gameportal.svg';
 
 function SecondaryNavbar() {
@@ -24,13 +24,14 @@ function SecondaryNavbar() {
                             </li>
                             <li className="nav-item-two">
                                 <Link className="nav-link" to="/about-us">
-                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> Chi siamo
+                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> Chi sono
                                 </Link>
                             </li>
                         </ul>
                         <Link className="navbar-brand-two" to="/">
                             <Logo id='logo-nav' src="/src/style/Logo/logo gameportal.svg" alt="" />
                         </Link>
+
                         <div className="log-pos">
                             <ul className="navbar-nav">
                                 <li className="nav-item">

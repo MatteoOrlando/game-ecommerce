@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../style/Home.css'
 
 function Home() {
-  const [categories, setCategories] = useState([]);
+
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,7 +11,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const token = sessionStorage.getItem('token');
+        const token = localStorage.getItem('token');
         const headers = {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ function Home() {
         const shuffledProducts = dataProducts.sort(() => 0.5 - Math.random());
         const selectedProducts = shuffledProducts.slice(0, 8);
 
-        setCategories(dataCategories);
+
         setFeaturedProducts(selectedProducts);
       } catch (error) {
         setError(error);
@@ -73,9 +73,17 @@ function Home() {
         </div>
         <a href='http://localhost:3000/register' className="join-now-button"><i className="fas fa-user-plus"></i>Unisciti a Game Portal!</a>
         <div className="hero-image">
-          <img src="" alt="Game Over" />
+          <img src="/" alt="" />
         </div>
       </div>
+
+
+      {/* ----implementazione futura (categorie)----
+
+
+  const [categories, setCategories] = useState([]);
+  setCategories(dataCategories);
+      
 
       <div className="categories-section">
         <h2>Categorie</h2>
@@ -88,15 +96,17 @@ function Home() {
             </div>
           ))}
         </div>
-      </div>
+        </div>*/}
 
       <div className="featured-products-section">
-        <h2>Prodotti in Evidenza</h2>
+        <div className='sub-h2'>  <h2 className='sub-h2'>Prodotti in Evidenza</h2>
+          <p><em>"Esplora nuovi mondi, affronta sfide epiche. La tua prossima avventura ti attende." </em></p></div>
+
         <div className="products-container">
           {featuredProducts.map((product) => (
-            <div key={product.id} className="product-card">
+            <div key={product.id} className="product-card-home">
               <Link to={`/product/${product.id}`}>
-                <img src={product.imageUrl} alt={product.name} />
+                <img className='product-image' src={product.imageUrl} alt={product.name} />
                 <div className="product-info">
                   <p className="product-name">{product.name}</p>
                   <p className="product-price">€{product.price}</p>

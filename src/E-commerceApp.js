@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   useLocation,
+  Navigate,
 } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductList from './pages/ProductList';
@@ -18,6 +19,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 
 function App() {
+  const isAuthenticated = () => {
+    const token = sessionStorage.getItem('token');
+    console.log('Token:', token);
+    return token != null;
+  };
+
   const location = useLocation();
   const isAuthPage =
     location.pathname === '/login' ||
@@ -28,7 +35,12 @@ function App() {
     <>
       {isAuthPage ? <SecondaryNavbar /> : <Navbar />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            isAuthenticated() ? <Home /> : <Navigate replace to="/login" />
+          }
+        />
         <Route path="/products" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />

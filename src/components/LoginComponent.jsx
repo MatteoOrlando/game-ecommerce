@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import '../style/Login.css';
-import '../components/SecondaryNavbar'
+import '../components/SecondaryNavbar';
 
 function LoginComponent() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
@@ -16,12 +18,13 @@ function LoginComponent() {
                 body: JSON.stringify({ email, password })
             });
 
-            const data = await response.json();
-
             if (response.ok) {
+                const data = await response.json();
                 sessionStorage.setItem('token', data.accessToken);
                 alert('Login successful');
+                navigate('/');
             } else {
+                const data = await response.json();
                 throw new Error(data.message || 'Failed to login');
             }
         } catch (error) {
@@ -29,7 +32,7 @@ function LoginComponent() {
         }
     };
 
-    return (<>
+    return (
         <div className="login-container">
             <div className='cart-box-log'>
                 <div className="login-box">
@@ -54,12 +57,10 @@ function LoginComponent() {
                         <span className='fb-i-bg'>
                             <i className="fab fa-facebook-f"></i></span><span> ACCEDI CON  <strong> FACEBOOK</strong></span>
                     </button>
-                    <p className="signup"><em>Non hai un account?</em> <strong><a href='http://localhost:3000/register' className="account-link">CREA UN ACCOUNT</a></strong></p>
+                    <p className="signup"><em>Non hai un account?</em> <strong><Link to='/register' className="account-link">CREA UN ACCOUNT</Link></strong></p>
                 </div>
             </div>
         </div>
-    </>
-
     );
 }
 
