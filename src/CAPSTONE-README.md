@@ -47,7 +47,7 @@ Per avviare il progetto localmente:
 
 Considerazioni Finali:
 
-Lavorare su GameStore è stato un viaggio entusiasmante.
+Lavorare su Game Portal è stato un viaggio entusiasmante.
 
 Il tempo trascorso applicando CSS è stato particolarmente gratificante, permettendomi di esprimere la mia creatività.
 
