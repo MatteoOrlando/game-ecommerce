@@ -12,8 +12,8 @@
 .footer .footer-container .footer-row {
   display: flex;
   justify-content: space-between;
-  max-width: 80%;
-  margin: 0px auto;
+  max-width: 85%;
+  margin: auto;
 }
 
 .footer h4 {
@@ -53,7 +53,6 @@
 }
 
 .footer-col svg {
-  margin-bottom: 10px;
   margin-right: 10px;
   font-size: 25px;
 }
@@ -133,17 +132,17 @@
 }
 
 .copyright {
+  display: flex;
   text-align: center;
   color: rgba(255, 255, 255, 0.573);
   flex-direction: column;
-  display: flex;
   margin-top: 20px;
-  display: flex;
   width: 100%;
-  font-size: 1px;
+  font-size: 14.5px;
 }
 
 .mat {
+  font-size: 14px;
   cursor: pointer;
   text-align: center;
 }

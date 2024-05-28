@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/ProductList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt, faArrowLeft, faArrowRight, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function shuffleArray(product) {
     let currentIndex = product.length, randomIndex;
@@ -61,12 +61,17 @@ function ProductList() {
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
 
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(products.length / productsPerPage); i++) {
+        pageNumbers.push(i);
+    }
+
     return (
         <div className="home-container-list">
             <div className="hero-banner-list">
                 <div className='Plist-title'>
                     <h1>Catalogo Giochi</h1>
-                    <p>...dai un occhiata!</p>
+                    <p>...dai un'occhiata, potresti trovare qualcosa d'interessante!</p>
                 </div>
                 <div className="pagination">
                     <button
@@ -76,7 +81,16 @@ function ProductList() {
                     >
                         <FontAwesomeIcon icon={faArrowLeft} />
                     </button>
-                    <span>Pagina {currentPage} di {Math.ceil(products.length / productsPerPage)}</span>
+                    {pageNumbers.map(number => (
+                        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                        <a href='#'
+                            key={number}
+                            onClick={() => paginate(number)}
+                            className={`pagination-button-2 ${number === currentPage ? 'active' : ''}`}
+                        >
+                            {number}
+                        </a>
+                    ))}
                     <button
                         onClick={() => paginate(currentPage + 1)}
                         disabled={currentPage === Math.ceil(products.length / productsPerPage)}
@@ -85,6 +99,7 @@ function ProductList() {
                         <FontAwesomeIcon icon={faArrowRight} />
                     </button>
                 </div>
+
                 <div className="product-list">
                     {currentProducts.map(product => (
                         <div key={product.id} className="product-card">
@@ -94,6 +109,7 @@ function ProductList() {
                                 <div className="price-and-icon">
                                     <p><i className="fas fa-euro-sign"></i> {product.price}</p>
                                     <FontAwesomeIcon icon={faExternalLinkAlt} className="detail-icon" />
+                                    <FontAwesomeIcon icon={faShoppingCart} className="detail-icon-2" />
                                 </div>
                             </Link>
                         </div>

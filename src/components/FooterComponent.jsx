@@ -13,7 +13,7 @@ function Footer() {
                     <div className="footer-col">
                         <h4><strong>Game Portal®</strong></h4>
                         <ul>
-                            <li><Link to="/about-us"><FontAwesomeIcon icon={faUserCircle} /> Chi Sono</Link></li>
+                            <li><Link to="/about-me"><FontAwesomeIcon icon={faUserCircle} /> About Me</Link></li>
                             <li><Link to="/contact"><FontAwesomeIcon icon={faPhone} /> Contatti</Link></li>
                         </ul>
                     </div>

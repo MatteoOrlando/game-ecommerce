@@ -4,8 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faInfoCircle, faUserCircle, faSignInAlt, faShoppingBag, faHeadset, faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import '../style/Navbar.css'
 import { ReactComponent as Logo } from '../assets/logo gameportal.svg';
+import { useCart } from '../providers/CartProvider'
 
 function Navbar() {
+
+    const { items } = useCart();
+
     return (
         <div className='fixed-navbar'>
             <nav className="navbar navbar-expand-lg">
@@ -25,7 +29,9 @@ function Navbar() {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/cart">
-                                    <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" /> <strong>Carrello</strong>
+                                    <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" />
+                                    {items.length > 0 && <span className="cart-badge">{items.length}</span>}
+                                    <strong>Carrello</strong>
                                 </Link>
                             </li>
                             <li className="nav-item">

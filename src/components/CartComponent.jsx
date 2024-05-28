@@ -1,42 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { useCart } from '../providers/CartProvider';
 import '../style/Cart.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faEuroSign } from '@fortawesome/free-solid-svg-icons';
 
+
 function CartComponent() {
-    const [items, setItems] = useState([]);
+    const { items, setItems } = useCart();
     const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
-        const fetchCartItems = async () => {
-            const token = localStorage.getItem('token');
-            if (!token) {
-                alert('Please log in to view your cart');
-                return;
-            }
 
-            try {
-                const res = await fetch('http://localhost:3001/cart', {
-                    method: 'GET',
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-
-                if (res.ok) {
-                    const data = await res.json();
-                    setItems(data);
-                    calculateTotal(data);
-                } else {
-                    throw new Error('Failed to fetch cart items');
-                }
-            } catch (error) {
-                console.error('Error fetching cart items:', error);
-            }
-        };
-
-        fetchCartItems();
-    }, []);
+        calculateTotal(items);
+    }, [items]);
 
     const calculateTotal = (items) => {
         const total = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
@@ -44,8 +20,6 @@ function CartComponent() {
     };
 
     const handleCheckout = async () => {
-        console.log('Procedendo al checkout');
-
         const token = localStorage.getItem('token');
         if (!token) {
             alert('Please log in to proceed with checkout');
@@ -53,27 +27,32 @@ function CartComponent() {
         }
 
         const productIds = items.map(item => item.product.id);
+        const totalPrice = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 
         try {
             const res = await fetch('http://localhost:3001/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${token}`
+                    'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify({ productIds, totalPrice })
             });
 
             if (res.status === 201) {
                 alert('Order placed successfully');
+                setItems([]);
+                setTotalPrice(0);
             } else {
-                throw new Error('Failed to place order');
+                const error = await res.json();
+                throw new Error(error.message || 'Failed to place order');
             }
         } catch (error) {
             console.error('Error during checkout:', error);
-            alert('Checkout failed');
+            alert('Checkout failed: ' + error.message);
         }
     };
+
 
     const handleRemoveItem = async (productId) => {
         const token = localStorage.getItem('token');
@@ -124,7 +103,7 @@ function CartComponent() {
                                 </div>
                             ))}
                             <h2 className="cart-total fs-3 ">Totale: <FontAwesomeIcon icon={faEuroSign} /> {totalPrice}</h2>
-                            <button className="cart-button" onClick={handleCheckout}>Procedi</button>
+                            <button className="cart-button" onClick={handleCheckout}>Procedi al pagamento</button>
                         </div>
                     </div>
                     <div className="gift-purchase">

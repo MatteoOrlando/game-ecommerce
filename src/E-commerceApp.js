@@ -14,11 +14,11 @@ import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import ProductDetails from './pages/ProductDetails';
 import Cart from './components/CartComponent';
+import { CartProvider } from './providers/CartProvider';
 import CustomerServicePage from './components/CustomerServicePage';
-import ChiSonoPage from './pages/ChiSonoPage';
-import Footer from './components/Footer';
+import AboutMe from './pages/AboutMe';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from './components/FooterComponent';
+import FooterComponent from './components/FooterComponent';
 
 function App() {
   const isAuthenticated = () => {
@@ -47,10 +47,10 @@ function App() {
         <Route path="/products" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/about-me" element={<ChiSonoPage />} />
+        <Route path="/about-me" element={<AboutMe />} />
         <Route path="/customer-service" element={<CustomerServicePage />} />
       </Routes>
-      <Footer />
+      <FooterComponent />
     </>
   );
 }
@@ -58,7 +58,9 @@ function App() {
 export default function AppWrapper() {
   return (
     <Router>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </Router>
   );
 }
