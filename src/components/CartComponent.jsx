@@ -75,10 +75,30 @@ function CartComponent() {
         }
     };
 
-    const handleRemoveItem = (productId) => {
-        const updatedItems = items.filter(item => item.product.id !== productId);
-        setItems(updatedItems);
-        calculateTotal(updatedItems);
+    const handleRemoveItem = async (productId) => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            alert('Please log in to proceed with checkout');
+            return;
+        }
+
+        try {
+            const res = await fetch(`http://localhost:3001/cart/${productId}`, {
+                method: 'DELETE',
+                headers: { Authorization: `Bearer ${token}` }
+            });
+
+            if (res.status === 204) {
+                const updatedItems = items.filter(item => item.product.id !== productId);
+                setItems(updatedItems);
+                calculateTotal(updatedItems);
+            } else {
+                throw new Error('Failed to remove item');
+            }
+        } catch (error) {
+            console.error('Error during item removal:', error);
+            alert('Removal failed');
+        }
     };
 
     const placeholderImage = "placeholder/image.jpg";

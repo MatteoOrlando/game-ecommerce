@@ -30,12 +30,12 @@ function Navbar() {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/customer-service">
-                                    <FontAwesomeIcon icon={faHeadset} className="nav-icon" /> Servizio clienti
+                                    <FontAwesomeIcon icon={faHeadset} className="nav-icon" /> Assistenza
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about-us">
-                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> About Us
+                                <Link className="nav-link" to="/about-me">
+                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> About Me
                                 </Link>
                             </li>
                         </ul>

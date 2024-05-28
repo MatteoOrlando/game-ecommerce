@@ -7,14 +7,17 @@
   background-position: center;
   height: 730px;
   margin-bottom: 80px;
-  margin: 6.5% auto;
-  margin-bottom: 3%;
+  margin: auto;
+  margin-top: 7%;
+  margin-bottom: 2.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   background: url('/public/assets/Reg-banner.webp') no-repeat center fixed;
+  border-top: 2px inset #ff5900fb;
+  border-left: 4px inset #ff5900;
 }
 
 .reg-container::before {
@@ -24,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.386);
+  background-color: rgba(0, 0, 0, 0.307);
   z-index: 1;
 }
 
@@ -131,7 +134,7 @@ input[type='password'] {
 }
 
 .register-button-blu:hover {
-  background: linear-gradient(#264edfe8, #172c77f4);
+  background: linear-gradient(#264edfee, #132564f4);
 }
 
 .divider {
@@ -151,7 +154,7 @@ input[type='password'] {
 }
 
 .sign-in-link:hover {
-  color: #1f3fb4;
+  color: #1f3da9;
 }
 
 @media (max-width: 1024px) {

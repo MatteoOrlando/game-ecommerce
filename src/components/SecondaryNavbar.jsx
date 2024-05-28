@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faUserCircle, faSignInAlt, faHeadset, } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as Logo } from '../assets/logo gameportal.svg';
 
+
+
 function SecondaryNavbar() {
     return (
         <div className='fixed-navbar-two'>
@@ -23,13 +25,13 @@ function SecondaryNavbar() {
                                 </Link>
                             </li>
                             <li className="nav-item-two">
-                                <Link className="nav-link" to="/about-us">
-                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> Chi sono
+                                <Link className="nav-link" to="/about-me">
+                                    <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> About Me
                                 </Link>
                             </li>
                         </ul>
                         <Link className="navbar-brand-two" to="/">
-                            <Logo id='logo-nav' src="../assets/logo gameportal.svg" alt="" />
+                            <Logo id='logo-nav' alt="" />
                         </Link>
 
                         <div className="log-pos">

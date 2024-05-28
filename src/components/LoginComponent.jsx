@@ -10,6 +10,7 @@ function LoginComponent() {
 
     const handleLogin = async () => {
         try {
+
             const response = await fetch('http://localhost:3001/auth/login', {
                 method: 'POST',
                 headers: {
@@ -20,9 +21,12 @@ function LoginComponent() {
 
             if (response.ok) {
                 const data = await response.json();
-                sessionStorage.setItem('token', data.accessToken);
+                localStorage.setItem('token', data.accessToken);
+                console.log('Saved token:', localStorage.getItem('token'));
                 alert('Login successful');
-                navigate('/');
+
+
+                setTimeout(() => navigate('/'), 750);
             } else {
                 const data = await response.json();
                 throw new Error(data.message || 'Failed to login');
@@ -31,6 +35,7 @@ function LoginComponent() {
             alert(error.message || 'Login failed');
         }
     };
+
 
     return (
         <div className="login-container">

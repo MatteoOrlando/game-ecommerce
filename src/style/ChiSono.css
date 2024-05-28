@@ -1,0 +1,48 @@
+.chi-sono-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 7%;
+  margin-bottom: 2.5%;
+  text-align: center;
+  padding: 50px;
+  color: #000000f3;
+  background: linear-gradient(to left, #bababa, #ffffff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  border-top: 2px solid #ff5900;
+  border-left: 4px solid #ff5900;
+}
+
+.chi-sono-container h1 {
+  color: #ff5900;
+  margin-bottom: 25px;
+}
+
+.chi-sono-container p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  font-weight: bold;
+
+  margin-right: 30px;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link {
+  color: #0a66c2;
+}
+
+.linkedin-link:hover {
+  color: #084484;
+}
+
+.github-link {
+  color: #000000e2;
+}
+
+.github-link:hover {
+  color: #795da3;
+}

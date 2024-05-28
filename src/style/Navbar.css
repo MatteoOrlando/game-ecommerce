@@ -58,9 +58,10 @@
 }
 
 .navbar-brand-two {
+  margin-top: 4px;
   margin-left: auto;
   margin-right: auto;
-  width: 265px;
+  width: 270px;
 }
 
 #logo-nav {

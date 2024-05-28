@@ -27,12 +27,12 @@ function Footer() {
                     <div className="footer-col">
                         <h4><strong>Legal</strong></h4>
                         <ul>
-                            <li><Link to="/privacy"><i class="fas fa-user-secret"></i>Privacy Policy </Link></li>
-                            <li><Link to="/terms"><i class="fas fa-stream"></i> Terms of Use</Link></li>
+                            <li><Link to="/privacy"><i class="fas fa-user-secret"></i>Politica Privacy</Link></li>
+                            <li><Link to="/terms"><i class="fas fa-stream"></i>Termini d'uso</Link></li>
                         </ul>
                     </div>
                     <div className="footer-social-col">
-                        <h4><strong>Seguici</strong></h4>
+                        <h4><strong>Seguimi</strong></h4>
                         <ul className="footer-socials">
                             <li><a href="http://facebook.com"><FontAwesomeIcon icon={faFacebookF} className='faFacebookF-foot' /> Facebook</a></li>
 

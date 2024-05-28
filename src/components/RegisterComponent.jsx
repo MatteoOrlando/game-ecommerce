@@ -36,7 +36,7 @@ function RegisterComponent() {
             if (response.ok) {
                 const data = await response.json();
                 alert(`Registration successful. Welcome, ${data.username}!`);
-                sessionStorage.setItem('token', data.token);
+                localStorage.setItem('token', data.token);
 
                 navigate('/');
             } else {

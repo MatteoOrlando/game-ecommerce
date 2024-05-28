@@ -9,6 +9,7 @@
   background-image: url('/public/assets/banner-prod-list.webp');
   background-size: 100% auto;
   background-position: center;
+  background-attachment: fixed;
   max-height: 100%;
   color: rgb(255, 255, 255);
   display: flex;
@@ -33,31 +34,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.434);
+  background: rgba(0, 0, 0, 0.345);
   z-index: 1;
 }
 
 .Plist-title {
-  background: -webkit-linear-gradient(#c0c0c0, #e05e01);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   z-index: 200;
   box-shadow: -8px -7px 13px 0 rgba(0, 0, 0, 0.936);
-  padding: 10px 125px;
+  padding: 10px 12px;
   border-radius: 20px;
   background: linear-gradient(to right, #fffffffa, #bbbbbbf7);
   border-top: 2px inset #ff5900e0;
   border-left: 4px inset #ff5900;
-  margin-bottom: 10px;
-  margin-top: 50px;
-}
-
-.product-card a,
-.product-card a:visited,
-.product-card a:hover,
-.product-card a:active {
-  text-decoration: none;
+  margin-top: 17px;
+  margin-bottom: 35px;
+  display: flex;
 }
 
 .product-list {
@@ -72,9 +65,9 @@
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
   z-index: 300;
-  width: 400px;
-  max-height: 500px;
-  margin-left: auto 0;
+  width: 380px;
+  max-height: 550px;
+  margin-left: 0;
   background: linear-gradient(to right, #fffffffa, #bbbbbbf7);
   border-radius: 12px;
   overflow: hidden;
@@ -115,7 +108,7 @@
   font-size: 24px;
   font-weight: 900;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.821);
-  background: -webkit-linear-gradient(#111111, #4d4d4d);
+  background: -webkit-linear-gradient(#111111, #393939);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -159,25 +152,25 @@
   z-index: 302;
   display: flex;
   justify-content: center;
-  padding: 15px 0;
   width: 90%;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .pagination button {
   border-top: 1px inset #ea5600e1;
   border-left: 2px inset #d44a00cf;
   border-bottom: 4px groove #822f00ec;
-  background: linear-gradient(to right, #fffffffa, #bbbbbbf7);
+  background: linear-gradient(to right, #fffffffa, #7d7d7df7);
   color: rgb(0, 0, 0);
   font-weight: 900;
-  margin: 10px 90px;
+  margin: -20px 90px;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 10px;
   transition: background 0.3s ease;
   box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
+  margin-top: 35px;
 }
 
 .pagination button:hover {
