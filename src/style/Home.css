@@ -21,7 +21,7 @@ body {
   border-left: 4px inset #ff5900;
   position: relative;
   z-index: 1;
-  background-size: 100% auto;
+  background-size: 95%;
   background-position: center;
   background-attachment: fixed;
   max-height: 980px;
@@ -277,7 +277,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
   z-index: 300;
-  width: 450px;
+  width: 480px;
   max-height: 500px;
   background: linear-gradient(to right, #fffffffa, #bbbbbbf7);
   border-radius: 12px;
@@ -319,12 +319,10 @@ h1 {
   min-height: 75%;
   max-height: 100%;
   object-fit: fill;
-  margin: 5px;
   border-top: 2px inset #ea5600e1;
   border-left: 4px inset #bf4300cf;
   border-bottom: 6px groove #aa3e00ec;
   border-radius: 10px;
-  padding: 10px;
 }
 
 .product-info .product-name {
@@ -340,13 +338,13 @@ h1 {
 }
 
 .product-info .product-price {
-  margin-top: 20px;
+  margin: 10px 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffffe9;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /*  responsiveness  */

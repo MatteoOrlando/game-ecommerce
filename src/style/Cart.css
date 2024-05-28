@@ -29,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.468);
+  background: rgba(0, 0, 0, 0.371);
   z-index: 10;
 }
 
@@ -387,8 +387,8 @@
   background: linear-gradient(to top, #00000098, #000000);
   font-family: 'Courier New', Courier, monospace;
   border-radius: 10px;
-  margin-left: 30%;
-  margin-right: 39%;
+  margin-left: 15%;
+  margin-right: 15%;
   margin-top: 25px;
   z-index: 10;
 }

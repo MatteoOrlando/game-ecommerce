@@ -111,7 +111,7 @@ function Home() {
                 <img className='product-image' src={product.imageUrl} alt={product.name} />
                 <div className="product-info">
                   <p className="product-name">{product.name}</p>
-                  <p className="product-price">€{product.price}</p>
+                  <p className="product-price">€ {product.price}</p>
                 </div>
               </Link>
             </div>

@@ -108,7 +108,17 @@ function CartComponent() {
                     </div>
                     <div className="gift-purchase">
                         <input type="checkbox" name="gift" />
-                        <label htmlFor="gift">Invia come regalo</label>
+                        <label htmlFor="gift">Invia come regalo, il 10% andrá in <a href='https://donazioni.unicef.it/landing/2019/06/thatsall/?wdgs=GAPM&type=reg&gad_source=1&gclid=CjwKCAjwgdayBhBQEiwAXhMxtj3hAeX6JnssNkmeC61Ik3VXaZvrTXk-oRQPYK0C5dCQmpdNKqYRSRoCC2EQAvD_BwE#/home'
+                            style={{
+                                color: '#008fcc',
+                                padding: '2px',
+                                borderRadius: '5px',
+
+                            }}>
+                            <strong></strong> <em style={{ color: '#008fcc', fontWeight: 'bold', }}>beneficienza</em>
+                        </a>
+
+                        </label>
                     </div>
                 </div>
                 <div className="payment-methods">
