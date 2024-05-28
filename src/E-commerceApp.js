@@ -6,18 +6,18 @@ import {
   useLocation,
   Navigate,
 } from 'react-router-dom';
+import NavbarComponent from './components/NavbarComponent';
+import SecondaryNavbar from './components/SecondaryNavbar';
+import LoginComponent from './components/LoginComponent';
+import RegisterComponent from './components/RegisterComponent';
 import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import ProductDetails from './pages/ProductDetails';
 import Cart from './components/CartComponent';
-import LoginComponent from './components/LoginComponent';
-import RegisterComponent from './components/RegisterComponent';
-import Navbar from './components/Navbar';
-import SecondaryNavbar from './components/SecondaryNavbar';
 import CustomerServicePage from './components/CustomerServicePage';
 import ChiSonoPage from './pages/ChiSonoPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const isAuthenticated = () => {
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      {isAuthPage ? <SecondaryNavbar /> : <Navbar />}
+      {isAuthPage ? <SecondaryNavbar /> : <NavbarComponent />}
       <Routes>
         <Route
           path="/"

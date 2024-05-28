@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/ProductList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function shuffleArray(product) {
     let currentIndex = product.length, randomIndex;
@@ -69,11 +69,21 @@ function ProductList() {
                     <p>...dai un occhiata!</p>
                 </div>
                 <div className="pagination">
-                    {[...Array(Math.ceil(products.length / productsPerPage)).keys()].map(number => (
-                        <button key={number + 1} onClick={() => paginate(number + 1)}><em></em>
-                            {number + 1}
-                        </button>
-                    ))}
+                    <button
+                        onClick={() => paginate(currentPage - 1)}
+                        disabled={currentPage === 1}
+                        className="pagination-button"
+                    >
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                    </button>
+                    <span>Pagina {currentPage} di {Math.ceil(products.length / productsPerPage)}</span>
+                    <button
+                        onClick={() => paginate(currentPage + 1)}
+                        disabled={currentPage === Math.ceil(products.length / productsPerPage)}
+                        className="pagination-button"
+                    >
+                        <FontAwesomeIcon icon={faArrowRight} />
+                    </button>
                 </div>
                 <div className="product-list">
                     {currentProducts.map(product => (
@@ -87,15 +97,8 @@ function ProductList() {
                                 </div>
                             </Link>
                         </div>
-                    ))}<div className="pagination mt-5 ">
-                        {[...Array(Math.ceil(products.length / productsPerPage)).keys()].map(number => (
-                            <button key={number + 1} onClick={() => paginate(number + 1)}><em></em>
-                                {number + 1}
-                            </button>
-                        ))}
-                    </div>
+                    ))}
                 </div>
-
             </div>
         </div>
     );
