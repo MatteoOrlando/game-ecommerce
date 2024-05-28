@@ -212,8 +212,8 @@ h1 {
 
 .sub-h2 {
   background: linear-gradient(to top, #000000af, #000000);
-  margin-bottom: 50px;
-  margin-top: -10px;
+  margin-bottom: 70px;
+  margin-top: -50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -233,6 +233,7 @@ h1 {
   margin-top: 5px;
   font-size: 50px;
   margin-bottom: 20px;
+  padding: 10px;
 }
 
 .sub-h2 p {
@@ -240,13 +241,15 @@ h1 {
   background: -webkit-linear-gradient(#ffffff, #e16a01f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 22px;
+  font-size: 23px;
   color: #000000;
   margin-top: 20px;
 }
 
-.categories-section,
+/*Sub-Banner-Home, .categories-section (wip)*/
+
 .featured-products-section {
+  border-radius: 25px;
   border-top: 2px inset #ff5900fb;
   border-left: 4px inset #ff5900;
   background-image: url('/public/assets/Sub-banner-home.webp');
@@ -256,12 +259,13 @@ h1 {
   background-attachment: fixed;
   margin: auto;
   margin-top: 5%;
-  margin-bottom: 2.5%;
+  margin-bottom: 4%;
   box-shadow: 8px 0px 60px rgba(10, 3, 0, 0.837);
   width: 80%;
 }
 
-.categories-container,
+/*.categories-container,*/
+
 .products-container {
   gap: 40px;
   display: flex;

@@ -17,7 +17,7 @@
 }
 
 .navbar {
-  height: 100px;
+  height: 90px;
   width: 100%;
   margin: 0;
   background: linear-gradient(to top, #101010db, #000000fd);
@@ -54,7 +54,7 @@
 
 .navbar-brand {
   margin-left: auto;
-  width: 250px;
+  width: 200px;
 }
 
 .navbar-brand-two {

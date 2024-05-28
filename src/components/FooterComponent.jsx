@@ -48,7 +48,7 @@ function Footer() {
             </div>
             <div className="copyright">
                 <em> <strong>&copy; 2023-{new Date().getFullYear()} </strong>GAME PORTAL Tutti i diritti riservati. GAME PORTAL è un marchio registrato di GAME PORTAL.
-                    <p>L'utilizzo di questo sito è soggetto ai termini di utilizzo e alla politica sulla privacy. GAME PORTAL e GAME STORE sono marchi registrati di GAME PORTAL Inc. e <strong>non possono </strong> essere utilizzati da terzi <strong>senza autorizzazione</strong> scritta espressa.</p></em>
+                    <p>L'utilizzo di questo sito è soggetto ai termini di utilizzo e alla politica sulla privacy. GAME PORTAL sono marchi registrati di GAME PORTAL Inc. e <strong>non possono </strong> essere utilizzati da terzi <strong>senza autorizzazione</strong> scritta espressa.</p></em>
                 <p className='mt-2 mat'>Questo sito é stato realizzato da <strong>O. M.</strong></p>
             </div>
 

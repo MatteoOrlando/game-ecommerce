@@ -12,8 +12,8 @@
 .footer .footer-container .footer-row {
   display: flex;
   justify-content: space-between;
-  max-width: 1300px;
-  margin: 10px auto;
+  max-width: 80%;
+  margin: 0px auto;
 }
 
 .footer h4 {
@@ -50,7 +50,6 @@
 .footer-col {
   display: flex;
   flex-direction: column;
-  min-width: 180px;
 }
 
 .footer-col svg {
@@ -86,7 +85,7 @@
 }
 .footer-socials .faFacebookF-foot {
   font-size: 25px;
-  background-color: #4267b2;
+  background-color: #3d5fa3;
 }
 
 .footer-socials .faFacebookF-foot:hover {
@@ -138,10 +137,10 @@
   color: rgba(255, 255, 255, 0.573);
   flex-direction: column;
   display: flex;
-  margin-top: 70px;
+  margin-top: 20px;
   display: flex;
-  width: 75%;
-  margin-left: 10%;
+  width: 100%;
+  font-size: 1px;
 }
 
 .mat {
