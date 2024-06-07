@@ -1,4 +1,6 @@
 .cart-box-log {
+  border-top: 2px inset #ff5900fb;
+  border-left: 4px inset #ff5900;
   position: relative;
   z-index: 3;
   box-shadow: 8px 0px 60px rgba(10, 3, 0, 0.837);
